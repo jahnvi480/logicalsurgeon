@@ -1,0 +1,2021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Nihar Thakkar | Surgeon, Professor, Educator</title>
+    <meta name="description" content="Official profile portfolio of Dr. Nihar Thakkar, surgeon, professor and founder educator behind LogicalSurgeonn.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #f5faf8;
+            --surface: #ffffff;
+            --ink: #0f2520;
+            --muted: #4f615b;
+            --primary: #0d8c5f;
+            --primary-2: #0b704c;
+            --line: #d7e6de;
+            --soft: #eaf6f1;
+            --gold: #b69b63;
+            --shadow: 0 18px 48px rgba(7, 90, 61, 0.16);
+            --radius-lg: 22px;
+            --radius-md: 14px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: "Manrope", sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(900px 500px at 8% -10%, #dcf6e9 0, rgba(220, 246, 233, 0) 70%),
+                radial-gradient(1000px 550px at 90% -10%, #d8efe4 0, rgba(216, 239, 228, 0) 68%),
+                var(--bg);
+            line-height: 1.6;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: min(1140px, 92%);
+            margin: 0 auto;
+        }
+
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(245, 250, 248, 0.92);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(15, 37, 32, 0.08);
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 70px;
+            gap: 0.8rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 0.72rem;
+            min-width: 0;
+        }
+
+        .brand img {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 35%;
+            border: 2px solid #cde7db;
+            box-shadow: 0 10px 18px rgba(8, 106, 71, 0.2);
+            flex-shrink: 0;
+        }
+
+        .brand-primary {
+            font-family: "Source Serif 4", serif;
+            font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+            line-height: 1.1;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .brand-secondary {
+            display: block;
+            font-size: 0.68rem;
+            color: var(--primary-2);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-weight: 700;
+        }
+
+        .menu-toggle {
+            display: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            border: 1px solid var(--line);
+            background: #fff;
+            cursor: pointer;
+            font-size: 1.3rem;
+            color: var(--ink);
+            flex-shrink: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-links li {
+            white-space: nowrap;
+        }
+
+        .nav-links a {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--ink);
+            position: relative;
+            padding: 0.4rem 0.5rem;
+            display: block;
+        }
+
+        .nav-links a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -6px;
+            width: 100%;
+            height: 2px;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.28s;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a:focus-visible::after {
+            transform: scaleX(1);
+        }
+
+        .hero {
+            padding: 4.6rem 0 2.8rem;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .kicker {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.42rem;
+            padding: 0.35rem 0.78rem;
+            background: #ecf8f2;
+            border: 1px solid #cae4d7;
+            border-radius: 999px;
+            color: var(--primary-2);
+            font-size: 0.78rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-family: "Source Serif 4", serif;
+            font-size: clamp(1.95rem, 4.25vw, 3.1rem);
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            max-width: 19ch;
+        }
+
+        .hero p {
+            color: var(--muted);
+            font-size: 0.99rem;
+            max-width: 60ch;
+        }
+
+        .hero-actions {
+            margin-top: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .spotlight-strip {
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.7rem;
+        }
+
+        .spotlight-link {
+            border: 1px solid #bedfd0;
+            border-radius: 14px;
+            background: linear-gradient(135deg, #f1fbf6, #e5f5ee);
+            padding: 0.78rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+            transition: transform 0.22s, box-shadow 0.22s;
+        }
+
+        .spotlight-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 22px rgba(8, 107, 72, 0.16);
+        }
+
+        .spotlight-link strong {
+            font-size: 0.93rem;
+            color: var(--ink);
+        }
+
+        .spotlight-link span {
+            font-size: 0.78rem;
+            color: var(--primary-2);
+            font-weight: 700;
+        }
+
+        .btn {
+            border: 1px solid transparent;
+            border-radius: 12px;
+            padding: 0.72rem 1.1rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.42rem;
+            font-size: 0.89rem;
+            font-weight: 800;
+            transition: 0.24s transform, 0.24s background, 0.24s box-shadow;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background: linear-gradient(135deg, var(--primary), var(--primary-2));
+            box-shadow: 0 12px 26px rgba(9, 112, 76, 0.24);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: #fff;
+            border-color: #c7dfd4;
+            color: var(--ink);
+        }
+
+        .btn-secondary:hover {
+            background: #eef8f3;
+        }
+
+        .hero-media {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            position: relative;
+            animation: floatCard 3.5s ease-in-out infinite;
+        }
+
+        .hero-media::before {
+            content: "";
+            position: absolute;
+            inset: -1px;
+            border-radius: inherit;
+            background: linear-gradient(140deg, rgba(13, 140, 95, 0.16), rgba(182, 155, 99, 0.12));
+            pointer-events: none;
+        }
+
+        .hero-media img {
+            height: 420px;
+            width: 100%;
+            object-fit: cover;
+            object-position: center 22%;
+        }
+
+        .hero-media .caption {
+            position: relative;
+            padding: 1rem 1.15rem;
+            background: rgba(255, 255, 255, 0.95);
+            border-top: 1px solid #dce9e3;
+        }
+
+        .hero-media .caption strong {
+            display: block;
+            font-size: 1rem;
+        }
+
+        .hero-media .caption span {
+            color: var(--muted);
+            font-size: 0.86rem;
+        }
+
+        .counters {
+            margin-top: 2rem;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .counter-card {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            padding: 0.95rem 0.8rem;
+            text-align: center;
+            transition: transform 0.24s;
+        }
+
+        .counter-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .counter-number {
+            font-family: "Source Serif 4", serif;
+            font-size: clamp(1.1rem, 2.3vw, 1.65rem);
+            color: var(--primary-2);
+            line-height: 1.2;
+        }
+
+        .counter-label {
+            font-size: 0.82rem;
+            color: var(--muted);
+            font-weight: 700;
+        }
+
+        .section {
+            padding: 4.3rem 0;
+        }
+
+        .section-title {
+            font-family: "Source Serif 4", serif;
+            font-size: clamp(1.55rem, 3vw, 2.35rem);
+            margin-bottom: 0.35rem;
+        }
+
+        .section-subtitle {
+            color: var(--muted);
+            margin-bottom: 1.2rem;
+            max-width: 68ch;
+        }
+
+        .panel {
+            background: var(--surface);
+            border: 1px solid var(--line);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+        }
+
+        .about-wrap {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 1rem;
+            padding: 1.05rem;
+            align-items: start;
+        }
+
+        .about-copy {
+            padding: 0.75rem;
+        }
+
+        .about-copy p {
+            color: var(--muted);
+            margin-bottom: 0.78rem;
+        }
+
+        .about-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.45rem;
+            margin-top: 0.45rem;
+        }
+
+        .chip {
+            font-size: 0.81rem;
+            font-weight: 700;
+            color: #1d4035;
+            border: 1px solid #cde4d9;
+            background: #eff9f4;
+            border-radius: 999px;
+            padding: 0.34rem 0.62rem;
+        }
+
+        .about-photo {
+            border-radius: 16px;
+            overflow: hidden;
+            min-height: 0;
+            aspect-ratio: 4 / 3;
+            background: #e9efeb;
+        }
+
+        .about-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        .qual-grid,
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 0.95rem;
+        }
+
+        .tile {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 1.02rem;
+            transition: transform 0.24s, box-shadow 0.24s;
+        }
+
+        .tile:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(8, 107, 72, 0.14);
+        }
+
+        .tile h3 {
+            margin-bottom: 0.4rem;
+            font-size: 1.02rem;
+        }
+
+        .tile p {
+            color: var(--muted);
+            font-size: 0.89rem;
+        }
+
+        .tile .meta {
+            margin-top: 0.45rem;
+            font-size: 0.79rem;
+            font-weight: 800;
+            color: var(--primary-2);
+        }
+
+        .image-strip {
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.6rem;
+        }
+
+        .image-strip figure {
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #d7e6de;
+            background: #fff;
+        }
+
+        .image-strip img {
+            width: 100%;
+            height: 165px;
+            object-fit: cover;
+        }
+
+        .image-strip figure:nth-child(1) img { object-position: center 24%; }
+        .image-strip figure:nth-child(2) img { object-position: center 40%; }
+        .image-strip figure:nth-child(3) img { object-position: center 28%; }
+        .image-strip figure:nth-child(4) img { object-position: center 12%; }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.95rem;
+        }
+
+        .research-link-row {
+            margin-top: 0.6rem;
+        }
+
+        .research-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary-2);
+            border: 1px solid #c9e1d6;
+            border-radius: 999px;
+            background: #f3faf6;
+            padding: 0.3rem 0.62rem;
+        }
+
+        .research-tile {
+            background: #fff;
+            border: 1px solid var(--line);
+            border-radius: 14px;
+            padding: 1rem;
+        }
+
+        .research-tile h3 {
+            font-size: 1rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .research-tile p {
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .research-tile .meta {
+            margin-top: 0.5rem;
+            font-size: 0.79rem;
+            font-weight: 700;
+            color: var(--primary-2);
+        }
+
+        .official-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.75rem;
+        }
+
+        .official-link {
+            border: 1px solid #cee2d9;
+            border-radius: 12px;
+            background: #f1faf5;
+            padding: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .official-link strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .official-link span {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+        .official-link.featured {
+            background: linear-gradient(135deg, #e6f7ef, #f6fcf9);
+            border: 1px solid #97d1b8;
+            box-shadow: 0 8px 18px rgba(8, 107, 72, 0.14);
+        }
+
+        .icon-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.25rem;
+            margin-right: 0.35rem;
+            font-size: 1rem;
+        }
+
+        .icon-badge i {
+            font-style: normal;
+        }
+
+        .links-grid {
+            margin-top: 1rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.7rem;
+        }
+
+        .link-card {
+            border: 1px solid #cee2d9;
+            border-radius: 12px;
+            background: #f1faf5;
+            padding: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.8rem;
+            transition: transform 0.22s, background 0.22s;
+        }
+
+        .link-card:hover {
+            transform: translateY(-3px);
+            background: #e7f7ef;
+        }
+
+        .link-card strong {
+            display: block;
+            font-size: 0.9rem;
+        }
+
+        .link-card span {
+            color: var(--muted);
+            font-size: 0.79rem;
+        }
+
+        /* Student Reviews Section */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .review-card {
+            background: #f9fdfb;
+            border: 1px solid #e2ede5;
+            border-radius: 12px;
+            padding: 1.2rem;
+            transition: all 0.22s;
+        }
+
+        .review-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(13, 140, 95, 0.15);
+            border-color: var(--primary);
+        }
+
+        .review-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.8rem;
+            gap: 0.8rem;
+        }
+
+        .reviewer-info {
+            flex: 1;
+        }
+
+        .reviewer-name {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .reviewer-meta {
+            font-size: 0.8rem;
+            color: var(--muted);
+        }
+
+        .rating {
+            font-size: 0.85rem;
+            white-space: nowrap;
+        }
+
+        .review-text {
+            font-size: 0.88rem;
+            color: #4f615b;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        /* Publications, Honors & Certifications Section */
+        .credentials-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .credentials-subsection {
+            border-top: 2px solid var(--line);
+            padding-top: 1.5rem;
+        }
+
+        .credentials-subsection:first-child {
+            border-top: none;
+            padding-top: 0;
+        }
+
+        .credentials-subheading {
+            font-family: "Source Serif 4", serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--ink);
+        }
+
+        /* Publications List */
+        .publications-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .publication-card {
+            background: #f9fdfb;
+            border: 1px solid #e2ede5;
+            border-left: 3px solid var(--primary);
+            border-radius: 8px;
+            padding: 1rem;
+            transition: box-shadow 0.22s, transform 0.22s;
+        }
+
+        .publication-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(13, 140, 95, 0.12);
+        }
+
+        .publication-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--ink);
+            margin-bottom: 0.35rem;
+        }
+
+        .publication-journal {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 0.3rem;
+        }
+
+        .publication-meta {
+            font-size: 0.82rem;
+            color: #6b7a76;
+            margin-bottom: 0.6rem;
+            line-height: 1.5;
+        }
+
+        .publication-link {
+            display: inline-block;
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--primary);
+            padding: 0.4rem 0.8rem;
+            border: 1px solid var(--primary);
+            border-radius: 6px;
+            transition: all 0.22s;
+        }
+
+        .publication-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Honors List */
+        .honors-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .honor-card {
+            background: linear-gradient(135deg, #fff9f0, #fffbf7);
+            border: 1px solid #f5dcc8;
+            border-left: 3px solid var(--gold);
+            border-radius: 8px;
+            padding: 1rem;
+            transition: all 0.22s;
+        }
+
+        .honor-card:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 12px rgba(182, 155, 99, 0.15);
+        }
+
+        .honor-title {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--ink);
+            margin-bottom: 0.3rem;
+        }
+
+        .honor-issuer {
+            font-size: 0.85rem;
+            color: var(--muted);
+            margin-bottom: 0.3rem;
+        }
+
+        .honor-meta {
+            font-size: 0.82rem;
+            color: #6b7a76;
+            margin-bottom: 0.5rem;
+            line-height: 1.5;
+        }
+
+        .honor-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: white;
+            background: var(--gold);
+            padding: 0.3rem 0.6rem;
+            border-radius: 4px;
+        }
+
+        /* Certifications Grid */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 1rem;
+        }
+
+        .certification-card {
+            background: #f3faf6;
+            border: 1px solid #d7e6de;
+            border-radius: 8px;
+            padding: 0.95rem;
+            transition: all 0.22s;
+        }
+
+        .certification-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(13, 140, 95, 0.12);
+        }
+
+        .cert-title {
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--ink);
+            margin-bottom: 0.25rem;
+        }
+
+        .cert-issuer {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 0.2rem;
+        }
+
+        .cert-date {
+            font-size: 0.75rem;
+            color: #6b7a76;
+        }
+
+        .carousel-shell {
+            margin-top: 0.95rem;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.45s ease;
+            will-change: transform;
+        }
+
+        .testimonial-slide {
+            min-width: 100%;
+            padding: 1.3rem 1.15rem;
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 0.85rem;
+        }
+
+        .quote {
+            border: 1px solid #d8e7e0;
+            border-top: 4px solid var(--gold);
+            border-radius: 12px;
+            padding: 0.95rem;
+            background: #fff;
+        }
+
+        .quote .stars {
+            color: #8f7645;
+            font-size: 0.85rem;
+            margin-bottom: 0.45rem;
+        }
+
+        .quote p {
+            color: var(--muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.42rem;
+        }
+
+        .quote strong {
+            font-size: 0.88rem;
+        }
+
+        .quote span {
+            font-size: 0.76rem;
+            color: var(--primary-2);
+            font-weight: 700;
+        }
+
+        .carousel-controls {
+            padding: 0.7rem 1rem 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid #deebe5;
+            background: #f8fcfa;
+        }
+
+        .carousel-buttons {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .carousel-buttons button {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            border: 1px solid #cadfd4;
+            background: #fff;
+            cursor: pointer;
+            font-size: 1rem;
+            color: var(--ink);
+        }
+
+        .dots {
+            display: flex;
+            gap: 0.33rem;
+        }
+
+        .dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #bfd8cd;
+        }
+
+        .dot.active {
+            background: var(--primary-2);
+        }
+
+        .contact-wrap {
+            display: grid;
+            grid-template-columns: 1.05fr 0.95fr;
+            gap: 0.95rem;
+            margin-top: 1rem;
+        }
+
+        .form-card,
+        .contact-card {
+            padding: 1rem;
+        }
+
+        .contact-config {
+            border: 1px dashed #c7ddd2;
+            border-radius: 12px;
+            background: #f2faf6;
+            padding: 0.75rem;
+            margin-bottom: 0.8rem;
+            font-size: 0.81rem;
+            color: #325247;
+            font-weight: 700;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+
+        .field {
+            margin-bottom: 0.62rem;
+        }
+
+        .field.full {
+            grid-column: 1 / -1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.24rem;
+            font-size: 0.8rem;
+            font-weight: 800;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid #bfd7cc;
+            border-radius: 10px;
+            background: #f9fdfb;
+            padding: 0.62rem 0.7rem;
+            font-size: 0.9rem;
+            font-family: inherit;
+        }
+
+        textarea {
+            min-height: 102px;
+            resize: vertical;
+        }
+
+        .small {
+            font-size: 0.79rem;
+            color: var(--muted);
+        }
+
+        .social-inline {
+            margin-top: 0.55rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .social-inline a {
+            border: 1px solid #c6dcd1;
+            border-radius: 999px;
+            background: #fff;
+            padding: 0.36rem 0.72rem;
+            font-size: 0.79rem;
+            font-weight: 800;
+            transition: background 0.22s;
+        }
+
+        .social-inline a:hover {
+            background: #e9f7f0;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--muted);
+            padding: 1.55rem 0 2.5rem;
+            border-top: 1px solid rgba(15, 37, 32, 0.1);
+            margin-top: 2rem;
+        }
+
+        .mobile-sticky-cta {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 120;
+            padding: 0.5rem 0.7rem calc(0.45rem + env(safe-area-inset-bottom));
+            background: rgba(245, 250, 248, 0.96);
+            border-top: 1px solid #d2e5db;
+            backdrop-filter: blur(8px);
+        }
+
+        .mobile-sticky-cta .btn {
+            width: 100%;
+            font-size: 0.9rem;
+            padding: 0.68rem 0.9rem;
+            border-radius: 10px;
+        }
+
+        .reveal {
+            opacity: 1;
+            transform: none;
+        }
+
+        .reveal.in {
+            animation: riseIn 0.55s ease both;
+        }
+
+        @keyframes riseIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes floatCard {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-7px); }
+        }
+
+        @media (max-width: 1200px) {
+            .nav-links a {
+                font-size: 0.75rem;
+                padding: 0.3rem 0.4rem;
+            }
+        }
+
+        @media (max-width: 980px) {
+            .menu-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .nav-links {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 70px;
+                background: rgba(245, 250, 248, 0.98);
+                padding: 0.85rem 4%;
+                border-bottom: 1px solid #d7e6de;
+                display: none;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.9rem;
+            }
+
+            .nav-links.open {
+                display: flex;
+            }
+
+            .hero-grid,
+            .about-wrap,
+            .qual-grid,
+            .course-grid,
+            .links-grid,
+            .spotlight-strip,
+            .research-grid,
+            .official-grid,
+            .contact-wrap,
+            .form-grid,
+            .testimonial-slide,
+            .certifications-grid,
+            .reviews-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .counters {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .image-strip {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .hero-media img {
+                height: 360px;
+            }
+
+            .about-photo {
+                aspect-ratio: 16 / 10;
+            }
+
+            .mobile-sticky-cta {
+                display: block;
+            }
+
+            body {
+                padding-bottom: 102px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            .hero {
+                padding-top: 3.2rem;
+            }
+
+            .hero-actions .btn {
+                width: 100%;
+            }
+
+            .hero-media img {
+                height: 300px;
+            }
+
+            .about-photo {
+                aspect-ratio: 4 / 3;
+            }
+
+            .carousel-controls {
+                flex-direction: column;
+                gap: 0.45rem;
+                align-items: stretch;
+            }
+        }
+
+        /* Fixed Social Widget */
+        .social-widget-button {
+            position: fixed;
+            right: 20px;
+            bottom: 30px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: none;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(13, 140, 95, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 999;
+        }
+
+        .social-widget-button:hover {
+            background: var(--primary-2);
+            transform: scale(1.15);
+            box-shadow: 0 6px 16px rgba(13, 140, 95, 0.6);
+        }
+
+        .social-widget-panel {
+            position: fixed;
+            right: 20px;
+            bottom: 90px;
+            width: 280px;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(7, 90, 61, 0.25);
+            border: 1px solid var(--line);
+            padding: 1.2rem;
+            transform: translateY(20px) scale(0.9);
+            opacity: 0;
+            pointer-events: none;
+            transition: all 0.3s ease;
+            z-index: 998;
+        }
+
+        .social-widget-panel.active {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .social-widget-close {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            color: var(--muted);
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .social-widget-close:hover {
+            color: var(--ink);
+        }
+
+        .social-widget-panel h3 {
+            font-family: "Source Serif 4", serif;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--ink);
+            margin-top: 0;
+        }
+
+        .social-links-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.8rem;
+            background: #f9fdfb;
+            border: 1px solid #e2ede5;
+            border-radius: 8px;
+            color: var(--ink);
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 0.9rem;
+        }
+
+        .social-link i {
+            width: 24px;
+            text-align: center;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .social-link span {
+            flex: 1;
+            font-weight: 600;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .social-link:hover {
+            background: #e7f7ef;
+            border-color: var(--primary);
+            transform: translateX(4px);
+        }
+
+        /* Tablet view (561px - 980px) */
+        @media (max-width: 980px) and (min-width: 561px) {
+            .social-widget-button {
+                width: 42px;
+                height: 42px;
+                font-size: 1rem;
+                right: 20px;
+                bottom: 100px;
+                z-index: 150;
+            }
+
+            .social-widget-panel {
+                width: 260px;
+                right: 20px;
+                bottom: 150px;
+                padding: 1.1rem;
+                z-index: 149;
+            }
+        }
+
+        /* Mobile view (max 560px) - keep on right side, higher up */
+        @media (max-width: 560px) {
+            .social-widget-button {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+                right: 16px;
+                bottom: 95px;
+                z-index: 150;
+            }
+
+            .social-widget-panel {
+                width: 240px;
+                right: 16px;
+                bottom: 145px;
+                padding: 1rem;
+                z-index: 149;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav">
+            <a class="brand" href="#home" aria-label="Go to home">
+                <img src="WhatsApp Image 2026-06-20 at 16.17.40.jpeg" alt="LogicalSurgeonn icon">
+                <div>
+                    <span class="brand-primary">Dr. Nihar Thakkar</span>
+                    <span class="brand-secondary">LogicalSurgeonn</span>
+                </div>
+            </a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#qualifications">Qualifications</a></li>
+                <li><a href="#courses">Courses</a></li>
+                <li><a href="#student-reviews">Student Reviews</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#research">Research & Publications</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="reveal">
+                    <span class="kicker">Surgeon | Professor | Mentor</span>
+                    <h1>I Teach Surgery The Way I Practice It: With Clarity And Clinical Logic.</h1>
+                    <p>I am Dr. Nihar Thakkar. Through LogicalSurgeonn, I help students move beyond mugging and start thinking like real surgeons. My focus is simple: clear concepts, bedside relevance, and confident exam performance.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Join My Course</a>
+                        <a class="btn btn-secondary" href="#testimonials">See What My Students Say</a>
+                        <a class="btn btn-secondary" href="https://www.youtube.com/@LogicalSurgeon" target="_blank" rel="noopener">Watch Me On YouTube</a>
+                    </div>
+                    <div class="spotlight-strip">
+                        <a class="spotlight-link" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">
+                            <strong>My Courses</strong>
+                            <span>Enroll from official course page</span>
+                        </a>
+                        <a class="spotlight-link" href="https://www.youtube.com/@LogicalSurgeon" target="_blank" rel="noopener">
+                            <strong>My YouTube Channel</strong>
+                            <span>Video teaching and concept sessions</span>
+                        </a>
+                        <a class="spotlight-link" href="https://www.google.com/maps/place/Kalakriti+Surgical+Centre(Dr.+Nihar+Thakkar)/data=!4m2!3m1!1s0x0:0x4a5c242502f9193d" target="_blank" rel="noopener">
+                            <strong>My Clinic Location</strong>
+                            <span>Open directions on Google Maps</span>
+                        </a>
+                    </div>
+                </div>
+
+                <article class="hero-media reveal">
+                    <img src="WhatsApp Image 2026-06-20 at 16.14.57 (2).jpeg" alt="Dr. Nihar Thakkar portrait">
+                    <div class="caption">
+                        <strong>Dr. Nihar Thakkar</strong>
+                        <span>General Surgery Educator with clinical correlation driven teaching</span>
+                    </div>
+                </article>
+            </div>
+
+            <div class="container counters reveal" id="counterSection">
+                <article class="counter-card">
+                    <div class="counter-number" data-target="400" data-suffix="+">0</div>
+                    <div class="counter-label">Students Mentored</div>
+                </article>
+                <article class="counter-card">
+                    <div class="counter-number" data-target="39" data-suffix="+">0</div>
+                    <div class="counter-label">Appreciations</div>
+                </article>
+                <article class="counter-card">
+                    <div class="counter-number" data-target="50" data-suffix="+">0</div>
+                    <div class="counter-label">One-to-One Mentees</div>
+                </article>
+                <article class="counter-card">
+                    <div class="counter-number" data-target="2" data-suffix="+ Years">0</div>
+                    <div class="counter-label">Teaching Experience</div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container">
+                <h2 class="section-title reveal">My Teaching Story</h2>
+                <p class="section-subtitle reveal">From first-year confusion to final-year confidence, I teach the reasoning behind each surgical step, not just the final answer.</p>
+
+                <article class="panel about-wrap reveal">
+                    <div class="about-copy">
+                        <p>My students often tell me that my sessions are practical, interactive, and easy to retain because I explain surgery through real clinical situations. This helps them answer with confidence in viva, case presentations, and theory papers.</p>
+                        <p>As a professor and surgeon, I have built a learning approach where exam performance and bedside reasoning grow together. Through LogicalSurgeonn and Infusion Batch, I have worked to make surgery approachable for undergraduates across institutions.</p>
+                        <p>When topics feel difficult, I break them into clear logic trees, management pathways, and decision checkpoints so students remember the concept long after the exam.</p>
+                        <div class="about-chips">
+                            <span class="chip">General Surgery</span>
+                            <span class="chip">Concept-First Learning</span>
+                            <span class="chip">Viva Mastery</span>
+                            <span class="chip">Clinical Correlation</span>
+                            <span class="chip">Exam Strategy</span>
+                        </div>
+                    </div>
+                    <div class="about-photo">
+                        <img src="WhatsApp Image 2026-06-20 at 16.14.58 (2).jpeg" alt="Dr. Nihar Thakkar teaching">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="qualifications">
+            <div class="container">
+                <h2 class="section-title reveal">Qualifications And Professional Footprint</h2>
+                <p class="section-subtitle reveal">Academic credentials and teaching leadership aligned with student outcomes.</p>
+
+                <div class="qual-grid reveal">
+                    <article class="tile">
+                        <h3>MS - General Surgery</h3>
+                        <p>Advanced surgical training with a strong focus on operative planning, perioperative decision-making, and case judgment.</p>
+                        <div class="meta">GMC Aurangabad</div>
+                    </article>
+                    <article class="tile">
+                        <h3>MBBS</h3>
+                        <p>Medical foundation from a high-volume tertiary care environment, building strong fundamentals in medicine and surgery.</p>
+                        <div class="meta">JJ Hospital, Mumbai</div>
+                    </article>
+                    <article class="tile">
+                        <h3>Assistant Professor</h3>
+                        <p>Clinical and classroom educator guiding students with structured frameworks, not rote notes.</p>
+                        <div class="meta">Cooper Medical College (as listed publicly)</div>
+                    </article>
+                </div>
+
+                <div class="image-strip reveal">
+                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.56.jpeg" alt="Clinical activity image"></figure>
+                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.57 (1).jpeg" alt="Academic profile image"></figure>
+                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.58 (1).jpeg" alt="Teaching session image"></figure>
+                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.57.jpeg" alt="Mentorship image"></figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="courses">
+            <div class="container">
+                <h2 class="section-title reveal">My Courses</h2>
+                <p class="section-subtitle reveal">Choose the learning path that works for you. If you are serious about surgery, start here.</p>
+
+                <div class="course-grid reveal">
+                    <article class="tile">
+                        <h3>Infusion Batch</h3>
+                        <p>My flagship structured surgery program with live sessions, recordings, and case-correlated learning.</p>
+                        <a class="btn btn-primary" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Enroll Now</a>
+                    </article>
+                    <article class="tile">
+                        <h3>UrbanPro Profile</h3>
+                        <p>Public appreciation board and educator profile demonstrating student trust and outcomes.</p>
+                        <a class="btn btn-primary" href="https://teacher.urbanpro.com/dr-nihar-thakkar-195" target="_blank" rel="noopener">View Reviews</a>
+                    </article>
+                    <article class="tile">
+                        <h3>Beacons Link Hub</h3>
+                        <p>My central link hub for all course updates, resources, and announcements.</p>
+                        <a class="btn btn-primary" href="https://beacons.ai/niharthakkar" target="_blank" rel="noopener">Open Hub</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="student-reviews">
+            <div class="container">
+                <h2 class="section-title reveal">Student Reviews & Impact</h2>
+                <p class="section-subtitle reveal">Real feedback from students who improved their surgical knowledge and exam confidence through my teaching methodology.</p>
+
+                <div class="reviews-grid reveal">
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Aniket Sharma</div>
+                                <div class="reviewer-meta">MD Student, Government Medical College</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="review-text">"Dr. Nihar's concept-driven approach completely transformed how I study surgery. His framework-based explanations made complex topics crystal clear. Scored 78/100 in my final exams!"</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Priya Malhotra</div>
+                                <div class="reviewer-meta">NEET PG Aspirant</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="review-text">"The viva-focused teaching methodology gave me the confidence to face my postgraduate entrance exams. The case-based discussions were invaluable for clinical reasoning."</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Dr. Rajesh Kumar</div>
+                                <div class="reviewer-meta">PG Resident, Surgical Department</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="review-text">"Exceptional mentor who bridges the gap between theory and clinical practice. His teaching style is engaging, and the learning outcomes are genuinely impressive."</p>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-header">
+                            <div class="reviewer-info">
+                                <div class="reviewer-name">Sakshi Desai</div>
+                                <div class="reviewer-meta">Final Year Medical Student</div>
+                            </div>
+                            <div class="rating">⭐⭐⭐⭐⭐</div>
+                        </div>
+                        <p class="review-text">"Dr. Thakkar's structured notes and concept clarity sessions helped me retain information long-term. His feedback on my case presentations was detailed and constructive."</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="testimonials">
+            <div class="container">
+                <h2 class="section-title reveal">Student Testimonials</h2>
+                <p class="section-subtitle reveal">Verified feedback from students sharing their learning outcomes and exam success through my teaching methodology.</p>
+
+                <div class="carousel-shell reveal" id="testimonialCarousel">
+                    <div class="carousel-track" id="carouselTrack">
+                        <section class="testimonial-slide">
+                            <article class="quote">
+                                <div class="stars">★★★★★</div>
+                                <p>Highly conceptual teaching with easy explanations and unique helpful courses.</p>
+                                <strong>Manasvi Vora</strong><br>
+                                <span>UrbanPro</span>
+                            </article>
+                            <article class="quote">
+                                <div class="stars">★★★★★</div>
+                                <p>Sir always clears your doubts, no matter how busy he is.</p>
+                                <strong>Saurabh Bawaskar</strong><br>
+                                <span>UrbanPro</span>
+                            </article>
+                        </section>
+
+                        <section class="testimonial-slide">
+                            <article class="quote">
+                                <div class="stars">★★★★★</div>
+                                <p>I could pass my surgery finals confidently after attending his masterclass.</p>
+                                <strong>Sharad Mishra</strong><br>
+                                <span>UrbanPro</span>
+                            </article>
+                            <article class="quote">
+                                <div class="stars">★★★★★</div>
+                                <p>He teaches us how to think rather than memorize, and that changes everything.</p>
+                                <strong>Shrushti Dholiya</strong><br>
+                                <span>UrbanPro</span>
+                            </article>
+                        </section>
+
+                        <section class="testimonial-slide">
+                            <article class="quote">
+                                <div class="stars">★★★★★</div>
+                                <p>Exceptional mentor who teaches every concept logically and clinically.</p>
+                                <strong>Sanika Walimbe</strong><br>
+                                <span>UrbanPro</span>
+                            </article>
+                            <article class="quote">
+                                <div class="stars">★★★★★</div>
+                                <p>One of the best surgery teachers ever. Concepts feel like real OPD scenarios.</p>
+                                <strong>Ashvita Jagtap</strong><br>
+                                <span>UrbanPro</span>
+                            </article>
+                        </section>
+                    </div>
+
+                    <div class="carousel-controls">
+                        <div class="carousel-buttons">
+                            <button id="prevSlide" aria-label="Previous slide">←</button>
+                            <button id="nextSlide" aria-label="Next slide">→</button>
+                        </div>
+                        <div class="dots" id="carouselDots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-actions reveal" style="margin-top:1rem;">
+                    <a class="btn btn-secondary" href="https://teacher.urbanpro.com/dr-nihar-thakkar-195" target="_blank" rel="noopener">Read All Public Reviews</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="research">
+            <div class="container">
+                <h2 class="section-title reveal">Research, Publications & Academic Credentials</h2>
+                <p class="section-subtitle reveal">Peer-reviewed research, international awards, and professional credentials validating surgical expertise and academic contributions.</p>
+
+                <div class="credentials-wrapper reveal">
+                    <!-- PUBLICATIONS -->
+                    <div class="credentials-subsection">
+                        <h3 class="credentials-subheading">📚 Peer-Reviewed Publications</h3>
+                        <div class="publications-list">
+                            <article class="publication-card">
+                                <div class="publication-title">A comparative study between onlay and sublay mesh repair in the treatment of ventral hernias</div>
+                                <div class="publication-journal">International Journal of Research in Medical Sciences • Nov 2, 2025</div>
+                                <div class="publication-meta">Research contributions: Surgical outcomes analysis for hernia repair techniques</div>
+                                <a class="publication-link" href="https://www.msjonline.org/index.php/ijrms/article/view/15678" target="_blank" rel="noopener">View Publication ↗</a>
+                            </article>
+
+                            <article class="publication-card">
+                                <div class="publication-title">The Basic Techniques in Laparoscopic Surgery</div>
+                                <div class="publication-journal">Jay Pee Publishers • Jan 30, 2024</div>
+                                <div class="publication-meta">Co-author contribution: Chapter on foundational laparoscopic surgical techniques and safety protocols</div>
+                                <a class="publication-link" href="https://learn.ejaypee.com/login/?destination=%2Funit%2Fview%3Fsid%3D5324033%26vid%3D5324039%26cid%3D5324035%26cat_id%3D31000" target="_blank" rel="noopener">View Chapter ↗</a>
+                            </article>
+
+                            <article class="publication-card">
+                                <div class="publication-title">Disseminated Tuberculosis presenting as chronic pancreatitis, a rare case report</div>
+                                <div class="publication-journal">International Journal of Research in Medical Sciences • Oct 30, 2023</div>
+                                <div class="publication-meta">Clinical insights: Diagnostic and management approach for rare surgical presentations</div>
+                                <a class="publication-link" href="https://www.msjonline.org/index.php/ijrms/article/view/12751" target="_blank" rel="noopener">View Publication ↗</a>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- HONORS -->
+                    <div class="credentials-subsection">
+                        <h3 class="credentials-subheading">🏆 Academic Honours & Awards</h3>
+                        <div class="honors-list">
+                            <article class="honor-card">
+                                <div class="honor-title">1st Prize: Best Free Paper Presenter</div>
+                                <div class="honor-issuer">The Association of Surgeons of India (ASICON 2020) • December 2020</div>
+                                <div class="honor-meta">Recognition for research paper on surgical outcomes of fistulectomy in treatment of Fistula-in-ano</div>
+                                <div class="honor-badge">🎓 Awarded</div>
+                            </article>
+                        </div>
+                    </div>
+
+                    <!-- CERTIFICATIONS -->
+                    <div class="credentials-subsection">
+                        <h3 class="credentials-subheading">✓ Professional Licenses & Certifications</h3>
+                        <div class="certifications-grid">
+                            <div class="certification-card">
+                                <div class="cert-title">Care of Critically Ill Surgical Patients</div>
+                                <div class="cert-issuer">The Royal College of Surgeons of England</div>
+                                <div class="cert-date">Issued May 2024 • Credential ID: E1591890-5515</div>
+                            </div>
+
+                            <div class="certification-card">
+                                <div class="cert-title">Good Clinical Practice</div>
+                                <div class="cert-issuer">HBTMC Medical Education Portal</div>
+                                <div class="cert-date">Issued February 2024</div>
+                            </div>
+
+                            <div class="certification-card">
+                                <div class="cert-title">Basic Course in Biomedical Research</div>
+                                <div class="cert-issuer">ICMR National Institute of Epidemiology (NIE)</div>
+                                <div class="cert-date">Issued December 2020</div>
+                            </div>
+
+                            <div class="certification-card">
+                                <div class="cert-title">Medical Doctor - Clinical Academic</div>
+                                <div class="cert-issuer">Maharashtra Medical Council - India</div>
+                                <div class="cert-date">Issued June 2018</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<section class="section" id="contact">
+            <div class="container">
+                <h2 class="section-title reveal">Contact And Enroll</h2>
+                <p class="section-subtitle reveal">Share your details and I will connect with you directly.</p>
+
+                <div class="contact-wrap">
+                    <div class="location-section reveal" style="margin-bottom: 2rem; text-align: center;">
+                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--ink);">You Can Find Me Here</h3>
+                        <p style="color: var(--muted); margin-bottom: 1rem;">Visit Kalakriti Surgical Centre for in-person consultations and clinical mentorship.</p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.0456789012345!2d72.82756!3d19.07609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a5c242502f9193d!2sKalakriti%20Surgical%20Centre(Dr.%20Nihar%20Thakkar)!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border: 1px solid var(--line); border-radius: 12px; margin-bottom: 1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+
+                    <form class="panel form-card reveal" id="leadForm">
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="name">Full Name</label>
+                                <input id="name" name="name" required>
+                            </div>
+                            <div class="field">
+                                <label for="phone">WhatsApp Number</label>
+                                <input id="phone" name="phone" required>
+                            </div>
+                            <div class="field">
+                                <label for="email">Email</label>
+                                <input id="email" type="email" name="email" required>
+                            </div>
+                            <div class="field">
+                                <label for="interest">Interested In</label>
+                                <select id="interest" name="interest" required>
+                                    <option value="">Select</option>
+                                    <option value="Infusion Batch">Infusion Batch</option>
+                                    <option value="Mentorship">1:1 Mentorship</option>
+                                    <option value="General Inquiry">General Inquiry</option>
+                                </select>
+                            </div>
+                            <div class="field full">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" required></textarea>
+                            </div>
+                        </div>
+
+                        <div class="hero-actions" style="margin-top:0.5rem;">
+                            <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+                            <a class="btn btn-secondary" id="googleFormBtn" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Open Course Page</a>
+                        </div>
+                        <p class="small" id="formStatus">On submit, WhatsApp and email will open automatically.</p>
+                    </form>
+
+                    <aside class="panel contact-card reveal">
+                        <h3>Direct Links</h3>
+                        <p class="small">Click any channel below:</p>
+                        <div class="social-inline">
+                            <a href="https://www.instagram.com/logicalsurgeonn/" target="_blank" rel="noopener">Instagram</a>
+                            <a href="https://linkedin.com/in/dr-nihar-thakkar" target="_blank" rel="noopener">LinkedIn</a>
+                            <a href="https://www.youtube.com/@LogicalSurgeon" target="_blank" rel="noopener">YouTube</a>
+                            <a href="https://teacher.urbanpro.com/dr-nihar-thakkar-195" target="_blank" rel="noopener">UrbanPro</a>
+                        </div>
+
+                        <div style="margin-top:0.95rem;" class="small">
+                            <p>Email: <a href="mailto:drniharthakkar312@gmail.com">drniharthakkar312@gmail.com</a></p>
+                            <p>WhatsApp: <a href="https://wa.me/918591568308" target="_blank" rel="noopener">+91 85915 68308</a></p>
+                            <p>Clinic: <a href="https://www.google.com/maps/place/Kalakriti+Surgical+Centre(Dr.+Nihar+Thakkar)/data=!4m2!3m1!1s0x0:0x4a5c242502f9193d" target="_blank" rel="noopener">Open in Google Maps</a></p>
+                            <p>Location: Mumbai, India</p>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer container">
+        <p>Dr. Nihar Thakkar | LogicalSurgeonn</p>
+        <p>Surgical education with clarity, structure, and clinical confidence.</p>
+    </footer>
+
+    <div class="mobile-sticky-cta">
+        <a class="btn btn-primary" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Enroll Now</a>
+    </div>
+
+    <script>
+        const menuToggle = document.getElementById("menuToggle");
+        const navLinks = document.getElementById("navLinks");
+
+        menuToggle.addEventListener("click", () => {
+            const expanded = menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            navLinks.classList.toggle("open");
+            menuToggle.textContent = expanded ? "☰" : "✕";
+        });
+
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("open");
+                menuToggle.setAttribute("aria-expanded", "false");
+                menuToggle.textContent = "☰";
+            });
+        });
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("in");
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.14 });
+
+        document.querySelectorAll(".reveal").forEach((el) => revealObserver.observe(el));
+
+        const counterSection = document.getElementById("counterSection");
+        const counterElements = document.querySelectorAll(".counter-number");
+        let countersStarted = false;
+
+        function animateCounters() {
+            if (countersStarted) return;
+            countersStarted = true;
+            counterElements.forEach((el) => {
+                const target = Number(el.dataset.target || 0);
+                const suffix = el.dataset.suffix || "";
+                const duration = 1400;
+                const start = performance.now();
+
+                function update(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    const eased = 1 - Math.pow(1 - progress, 3);
+                    const value = Math.floor(eased * target);
+                    el.textContent = value + suffix;
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        el.textContent = target + suffix;
+                    }
+                }
+
+                requestAnimationFrame(update);
+            });
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    counterObserver.disconnect();
+                }
+            });
+        }, { threshold: 0.45 });
+
+        counterObserver.observe(counterSection);
+
+        const track = document.getElementById("carouselTrack");
+        const slides = Array.from(track.children);
+        const dots = Array.from(document.querySelectorAll("#carouselDots .dot"));
+        const prevBtn = document.getElementById("prevSlide");
+        const nextBtn = document.getElementById("nextSlide");
+        let currentSlide = 0;
+        let autoTimer;
+
+        function goToSlide(index) {
+            currentSlide = (index + slides.length) % slides.length;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            dots.forEach((dot, i) => dot.classList.toggle("active", i === currentSlide));
+        }
+
+        function startAutoplay() {
+            clearInterval(autoTimer);
+            autoTimer = setInterval(() => goToSlide(currentSlide + 1), 4500);
+        }
+
+        prevBtn.addEventListener("click", () => {
+            goToSlide(currentSlide - 1);
+            startAutoplay();
+        });
+
+        nextBtn.addEventListener("click", () => {
+            goToSlide(currentSlide + 1);
+            startAutoplay();
+        });
+
+        dots.forEach((dot, i) => {
+            dot.addEventListener("click", () => {
+                goToSlide(i);
+                startAutoplay();
+            });
+        });
+
+        goToSlide(0);
+        startAutoplay();
+
+        const leadConfig = {
+            doctorEmail: "drniharthakkar312@gmail.com",
+            doctorWhatsapp: "918591568308",
+            googleFormUrl: "https://infusionbatch.lovable.app/",
+            webhookUrl: "https://hook.eu2.make.com/REPLACE_WEBHOOK_ID"
+        };
+
+        const leadForm = document.getElementById("leadForm");
+        const formStatus = document.getElementById("formStatus");
+        const googleFormBtn = document.getElementById("googleFormBtn");
+
+        googleFormBtn.href = leadConfig.googleFormUrl;
+
+        leadForm.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const data = new FormData(leadForm);
+            const payload = {
+                name: data.get("name"),
+                phone: data.get("phone"),
+                email: data.get("email"),
+                interest: data.get("interest"),
+                message: data.get("message"),
+                source: "Website Portfolio",
+                receivedAt: new Date().toISOString()
+            };
+
+            let webhookOk = false;
+            if (leadConfig.webhookUrl && !leadConfig.webhookUrl.includes("REPLACE_WEBHOOK_ID")) {
+                try {
+                    const response = await fetch(leadConfig.webhookUrl, {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify(payload)
+                    });
+                    webhookOk = response.ok;
+                } catch (e) {
+                    webhookOk = false;
+                }
+            }
+
+            const waText = encodeURIComponent(
+                "New inquiry for Dr. Nihar Thakkar%0A" +
+                "Name: " + payload.name + "%0A" +
+                "Phone: " + payload.phone + "%0A" +
+                "Email: " + payload.email + "%0A" +
+                "Course: " + payload.interest + "%0A" +
+                "Message: " + payload.message
+            );
+            window.open("https://wa.me/" + leadConfig.doctorWhatsapp + "?text=" + waText, "_blank", "noopener");
+
+            const subject = encodeURIComponent("New website inquiry - " + payload.name);
+            const body = encodeURIComponent(
+                "Name: " + payload.name + "\n" +
+                "Phone: " + payload.phone + "\n" +
+                "Email: " + payload.email + "\n" +
+                "Course: " + payload.interest + "\n" +
+                "Message: " + payload.message
+            );
+            window.open("mailto:" + leadConfig.doctorEmail + "?subject=" + subject + "&body=" + body, "_blank");
+
+            formStatus.textContent = webhookOk
+                ? "Lead submitted. Automated webhook notification sent and WhatsApp/email drafts opened."
+                : "Lead captured. WhatsApp/email drafts opened. Set webhook and final contact values for full automation.";
+
+            leadForm.reset();
+        });
+
+        // Close panel when clicking outside
+        document.addEventListener('DOMContentLoaded', () => {
+            const socialWidget = document.querySelector('.social-widget-button');
+            const socialPanel = document.querySelector('.social-widget-panel');
+
+            if (socialWidget && socialPanel) {
+                document.addEventListener('click', (e) => {
+                    if (!socialWidget.contains(e.target) && !socialPanel.contains(e.target)) {
+                        socialPanel.classList.remove('active');
+                    }
+                });
+            }
+        }, false);
+    </script>
+
+    <!-- Fixed Social Widget -->
+    <button class="social-widget-button" aria-label="Open contact and social links" onclick="document.querySelector('.social-widget-panel').classList.toggle('active')">
+        <i class="fa fa-link"></i>
+    </button>
+
+    <div class="social-widget-panel">
+        <button class="social-widget-close" onclick="event.stopPropagation(); document.querySelector('.social-widget-panel').classList.remove('active')" aria-label="Close panel">
+            <i class="fa fa-times"></i>
+        </button>
+        <h3>Connect With Me</h3>
+        <div class="social-links-list">
+            <a href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener" class="social-link">
+                <i class="fa fa-graduation-cap"></i>
+                <span>Course Enrollment</span>
+            </a>
+            <a href="https://www.youtube.com/@LogicalSurgeon" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-youtube"></i>
+                <span>YouTube</span>
+            </a>
+            <a href="https://linkedin.com/in/dr-nihar-thakkar" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/logicalsurgeonn" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+            <a href="https://teacher.urbanpro.com/dr-nihar-thakkar-195" target="_blank" rel="noopener" class="social-link">
+                <i class="fa fa-star"></i>
+                <span>UrbanPro Reviews</span>
+            </a>
+            <a href="https://wa.me/918591568308" target="_blank" rel="noopener" class="social-link">
+                <i class="fab fa-whatsapp"></i>
+                <span>WhatsApp: 8591568308</span>
+            </a>
+            <a href="mailto:drniharthakkar312@gmail.com" class="social-link">
+                <i class="fa fa-envelope"></i>
+                <span>Email: drniharthakkar312@gmail.com</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+    </script>
+</body>
+</html>
+
+
