@@ -101,9 +101,7 @@ p, h1, h2, h3, a { overflow-wrap: anywhere; }
     .header-course { margin-left: auto; order: 0; }
     .primary-nav { flex-basis: 100%; margin-left: 0; }
     .primary-nav ul { gap: 6px 26px; }
-    .menu-ready .menu-toggle { display: block; }
-    .menu-ready .menu-toggle[aria-expanded="false"] ~ .primary-nav { display: none; }
-    .menu-ready .primary-nav { padding-top: 12px; border-top: 1px solid var(--line); }
+    .primary-nav { padding-top: 12px; border-top: 1px solid var(--line); }
 }
 @media (max-width: 700px) {
     .container { width: 90%; }
@@ -111,11 +109,10 @@ p, h1, h2, h3, a { overflow-wrap: anywhere; }
     .utility-bar .container > span { max-width: 26ch; }
     .navigation { gap: 18px 12px; }
     .brand-primary { font-size: 22px; }
-    .menu-toggle { margin-left: auto; }
     .header-course { order: 3; flex-basis: 100%; margin: 0; }
     .primary-nav { order: 2; }
-    .primary-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 20px; }
-    .primary-nav a { padding-block: 12px; }
+    .primary-nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 12px; }
+    .primary-nav a { min-height: 44px; padding-block: 12px; font-size: .7rem; }
     .hero { padding-block: 38px; }
     .hero-grid, .split, .featured-course { grid-template-columns: 1fr; gap: 30px; }
     h1 { font-size: clamp(2.35rem, 9.5vw, 3.6rem); }
