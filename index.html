@@ -1383,24 +1383,32 @@
             }
         }
     </style>
+    <link rel="stylesheet" href="portfolio-redesign.css">
+    <script src="portfolio-redesign.js" defer></script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="utility-bar">
+        <div class="container">
+            <span>General surgery &amp; surgical education · Mumbai</span>
+            <a href="tel:+918591568308">Let’s talk <span>+91 85915 68308</span> ↗</a>
+        </div>
+    </div>
     <header class="site-header">
         <div class="container nav">
             <a class="brand" href="#home" aria-label="Go to home">
-                <img src="WhatsApp Image 2026-06-20 at 16.17.40.jpeg" alt="LogicalSurgeonn icon">
                 <div>
                     <span class="brand-primary">Dr. Nihar Thakkar</span>
                     <span class="brand-secondary">LogicalSurgeonn</span>
                 </div>
             </a>
 
-            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+            <a class="btn btn-primary header-course" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Explore Courses <span aria-hidden="true">↗</span></a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">☰</button>
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#qualifications">Qualifications</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
                 <li><a href="#research">Publications</a></li>
@@ -1409,16 +1417,17 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="hero" id="home">
             <div class="container hero-grid">
                 <div class="reveal">
-                    <span class="kicker">Surgeon | Professor | Mentor</span>
+                    <span class="kicker">Surgeon. Educator. Your mentor.</span>
                     <h1>Dr. Nihar Thakkar</h1>
-                    <p>I’m a general surgeon and educator. Through LogicalSurgeonn, I teach surgery with clear concepts, clinical reasoning and practical exam preparation.</p>
+                    <p class="hero-statement">Surgery made clear.<br>Learning made <em>practical.</em></p>
+                    <p>I connect the classroom to the clinic—helping you understand the why, not just remember the answer.</p>
                     <div class="hero-actions">
-                        <a class="btn btn-primary" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Join My Course</a>
-                        <a class="btn btn-secondary" href="#about">Meet Your Mentor</a>
+                        <a class="btn btn-primary" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Explore My Courses <span aria-hidden="true">↗</span></a>
+                        <a class="btn btn-secondary" href="#contact">Plan a Clinic Visit <span aria-hidden="true">↗</span></a>
                     </div>
                     <div class="spotlight-strip">
                         <a class="spotlight-link" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">
@@ -1437,10 +1446,10 @@
                 </div>
 
                 <article class="hero-media reveal">
-                    <img src="WhatsApp Image 2026-06-20 at 16.14.57 (2).jpeg" alt="Dr. Nihar Thakkar, general surgeon and surgery educator" fetchpriority="high" decoding="async">
+                    <img src="WhatsApp Image 2026-06-20 at 16.17.40.jpeg" alt="Dr. Nihar Thakkar at Kalakriti Health Square" width="1080" height="1350" fetchpriority="high" decoding="async">
                     <div class="caption">
-                        <strong>Dr. Nihar Thakkar</strong>
-                        <span>General Surgeon · Surgery Educator</span>
+                        <span>IN THE CLINIC. IN THE CLASSROOM.</span>
+                        <strong>A personal approach.<br>A clear way forward.</strong>
                     </div>
                 </article>
             </div>
@@ -1467,7 +1476,8 @@
 
         <section class="section" id="about">
             <div class="container">
-                <h2 class="section-title reveal">Surgery, Made Clear</h2>
+                <p class="eyebrow">A little about me</p>
+                <h2 class="section-title reveal">A surgeon’s perspective.<br>A teacher’s <em>patience.</em></h2>
 
                 <article class="panel about-wrap reveal">
                     <div class="about-copy">
@@ -1484,12 +1494,8 @@
                     </div>
                 </article>
             </div>
-        </section>
-
-        <section class="section" id="qualifications">
-            <div class="container">
-                <h2 class="section-title reveal">Qualifications</h2>
-
+                <details class="background-details" id="qualifications">
+                    <summary>My academic background <span aria-hidden="true">+</span></summary>
                 <div class="qual-grid reveal">
                     <article class="tile">
                         <h3>MS - General Surgery</h3>
@@ -1511,29 +1517,37 @@
                     <figure><img src="WhatsApp Image 2026-06-20 at 16.14.58 (1).jpeg" alt="Surgery teaching session" loading="lazy" decoding="async"></figure>
                     <figure><img src="WhatsApp Image 2026-06-20 at 16.14.57.jpeg" alt="Dr. Nihar Thakkar mentoring students" loading="lazy" decoding="async"></figure>
                 </div>
+                </details>
             </div>
         </section>
 
         <section class="section" id="courses">
             <div class="container">
-                <h2 class="section-title reveal">Learn Surgery With Me</h2>
-                <p class="section-subtitle reveal">Start with Infusion Batch, my structured surgery course.</p>
+                <p class="eyebrow">LogicalSurgeonn · Learn with me</p>
+                <h2 class="section-title reveal">Less memorising.<br>More <em>understanding.</em></h2>
+                <p class="section-subtitle reveal">From your first clinical case to your next viva.</p>
 
                 <div class="course-grid reveal">
-                    <article class="tile">
+                    <article class="tile featured-course">
+                        <img class="course-photo" src="WhatsApp Image 2026-06-20 at 16.14.57 (2).jpeg" alt="Dr. Nihar Thakkar explaining a concept during a teaching session" width="725" height="710" loading="lazy" decoding="async">
+                        <div class="course-copy">
+                        <span class="eyebrow">My flagship course</span>
                         <h3>Infusion Batch</h3>
                         <p>Learn through clinical cases, clear explanations and exam-focused preparation.</p>
                         <a class="btn btn-primary" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Enroll Now</a>
+                        </div>
                     </article>
                     <article class="tile">
-                        <h3>UrbanPro Profile</h3>
-                        <p>Explore my teaching profile and student feedback.</p>
-                        <a class="btn btn-primary" href="https://teacher.urbanpro.com/dr-nihar-thakkar-195" target="_blank" rel="noopener">View Reviews</a>
+                        <i class="fab fa-youtube course-icon" aria-hidden="true"></i>
+                        <h3>A concept at a time.</h3>
+                        <p>Explore my surgery explanations on YouTube.</p>
+                        <a class="btn btn-secondary" href="https://www.youtube.com/@LogicalSurgeon" target="_blank" rel="noopener">Watch on YouTube ↗</a>
                     </article>
                     <article class="tile">
-                        <h3>Beacons Link Hub</h3>
-                        <p>Find my latest resources and course updates.</p>
-                        <a class="btn btn-primary" href="https://beacons.ai/niharthakkar" target="_blank" rel="noopener">Open Hub</a>
+                        <i class="fa fa-book-open course-icon" aria-hidden="true"></i>
+                        <h3>Your next step.</h3>
+                        <p>Find my latest course updates and learning resources.</p>
+                        <a class="btn btn-secondary" href="https://beacons.ai/niharthakkar" target="_blank" rel="noopener">Explore Resources ↗</a>
                     </article>
                 </div>
             </div>
@@ -1541,7 +1555,8 @@
 
         <section class="section" id="testimonials">
             <div class="container">
-                <h2 class="section-title reveal">What My Students Say</h2>
+                <p class="eyebrow">The learning experience</p>
+                <h2 class="section-title reveal">In my students’ <em>words.</em></h2>
 
                 <div class="carousel-shell reveal" id="testimonialCarousel">
                     <div class="carousel-track" id="carouselTrack">
@@ -1612,7 +1627,8 @@
 
         <section class="section" id="research">
             <div class="container">
-                <h2 class="section-title reveal">Research &amp; Publications</h2>
+                <p class="eyebrow">Beyond the classroom</p>
+                <h2 class="section-title reveal">Research &amp; <em>publications.</em></h2>
 
                 <div class="credentials-wrapper reveal">
                     <!-- PUBLICATIONS -->
@@ -1689,12 +1705,13 @@
 
 <section class="section" id="contact">
             <div class="container">
-                <h2 class="section-title reveal">Contact &amp; Enroll</h2>
+                <p class="eyebrow">Let’s connect</p>
+                <h2 class="section-title reveal">You can find me <em>here.</em></h2>
                 <p class="section-subtitle reveal">Ask me about courses, mentorship or a clinic visit.</p>
 
                 <div class="contact-wrap">
-                    <div class="location-section reveal" style="margin-bottom: 2rem; text-align: center;">
-                        <h3 style="font-size: 1.2rem; margin-bottom: 0.5rem; color: var(--ink);">You Can Find Me Here</h3>
+                    <div class="location-section reveal">
+                        <h3>Kalakriti Surgical Centre</h3>
                         <p style="color: var(--muted); margin-bottom: 1rem;">Kalakriti Surgical Centre, Mumbai.</p>
                         <iframe title="Kalakriti Surgical Centre location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.0456789012345!2d72.82756!3d19.07609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a5c242502f9193d!2sKalakriti%20Surgical%20Centre(Dr.%20Nihar%20Thakkar)!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border: 1px solid var(--line); border-radius: 12px; margin-bottom: 1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
@@ -1729,10 +1746,10 @@
                         </div>
 
                         <div class="hero-actions" style="margin-top:0.5rem;">
-                            <button class="btn btn-primary" type="submit">Submit Inquiry</button>
+                            <button class="btn btn-primary" type="submit">Prepare My Inquiry ↗</button>
                             <a class="btn btn-secondary" id="googleFormBtn" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Open Course Page</a>
                         </div>
-                        <p class="small" id="formStatus">On submit, WhatsApp and email will open automatically.</p>
+                        <p class="small" id="formStatus" role="status">Opens WhatsApp and email drafts for you to send. Please don’t include medical records.</p>
                     </form>
 
                     <aside class="panel contact-card reveal">
@@ -1757,6 +1774,7 @@
 
     <div class="mobile-sticky-cta">
         <a class="btn btn-primary" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Enroll Now</a>
+        <button class="mobile-connect" type="button" aria-controls="socialPanel" aria-expanded="false">Connect <span aria-hidden="true">↗</span></button>
     </div>
 
     <script>
@@ -1845,6 +1863,7 @@
 
         function startAutoplay() {
             clearInterval(autoTimer);
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches || document.getElementById('testimonialCarousel').matches(':hover, :focus-within')) return;
             autoTimer = setInterval(() => goToSlide(currentSlide + 1), 4500);
         }
 
@@ -1910,11 +1929,11 @@
             }
 
             const waText = encodeURIComponent(
-                "New inquiry for Dr. Nihar Thakkar%0A" +
-                "Name: " + payload.name + "%0A" +
-                "Phone: " + payload.phone + "%0A" +
-                "Email: " + payload.email + "%0A" +
-                "Course: " + payload.interest + "%0A" +
+                "New inquiry for Dr. Nihar Thakkar\n" +
+                "Name: " + payload.name + "\n" +
+                "Phone: " + payload.phone + "\n" +
+                "Email: " + payload.email + "\n" +
+                "Course: " + payload.interest + "\n" +
                 "Message: " + payload.message
             );
             window.open("https://wa.me/" + leadConfig.doctorWhatsapp + "?text=" + waText, "_blank", "noopener");
@@ -1931,36 +1950,23 @@
 
             formStatus.textContent = webhookOk
                 ? "Lead submitted. Automated webhook notification sent and WhatsApp/email drafts opened."
-                : "Lead captured. WhatsApp/email drafts opened. Set webhook and final contact values for full automation.";
+                : "Please send your inquiry in WhatsApp or your email app. Nothing has been submitted automatically.";
 
             leadForm.reset();
         });
 
-        // Close panel when clicking outside
-        document.addEventListener('DOMContentLoaded', () => {
-            const socialWidget = document.querySelector('.social-widget-button');
-            const socialPanel = document.querySelector('.social-widget-panel');
-
-            if (socialWidget && socialPanel) {
-                document.addEventListener('click', (e) => {
-                    if (!socialWidget.contains(e.target) && !socialPanel.contains(e.target)) {
-                        socialPanel.classList.remove('active');
-                    }
-                });
-            }
-        }, false);
     </script>
 
     <!-- Fixed Social Widget -->
-    <button class="social-widget-button" aria-label="Open contact and social links" onclick="document.querySelector('.social-widget-panel').classList.toggle('active')">
-        <i class="fa fa-link"></i>
+    <button class="social-widget-button" type="button" aria-label="Open contact and social links" aria-controls="socialPanel" aria-expanded="false">
+        <i class="fa fa-link" aria-hidden="true"></i>
     </button>
 
-    <div class="social-widget-panel">
-        <button class="social-widget-close" onclick="event.stopPropagation(); document.querySelector('.social-widget-panel').classList.remove('active')" aria-label="Close panel">
+    <div class="social-widget-panel" id="socialPanel" role="region" aria-labelledby="connectHeading" hidden>
+        <button class="social-widget-close" type="button" aria-label="Close panel">
             <i class="fa fa-times"></i>
         </button>
-        <h3>Connect With Me</h3>
+        <h3 id="connectHeading">Connect With Me</h3>
         <div class="social-links-list">
             <a href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener" class="social-link">
                 <i class="fa fa-graduation-cap"></i>
