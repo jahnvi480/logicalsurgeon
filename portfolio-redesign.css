@@ -137,6 +137,10 @@ em { font-weight: inherit; color: var(--primary); }
 .field textarea { min-height: 85px; }
 .form-grid { gap: 14px; }
 .small { font-size: 11px; overflow-wrap: anywhere; }
+.form-card[hidden], .inquiry-drafts[hidden] { display: none; }
+.inquiry-drafts { margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); }
+.inquiry-drafts h3 { font: 500 21px/1.3 "Source Serif 4", serif; }
+.inquiry-drafts .hero-actions { margin: 16px 0; }
 .contact-card { padding: 0; border: 0; background: transparent; }
 .contact-card h3 { font: 500 23px/1.3 "Source Serif 4", serif; }
 .contact-card .small p { margin-bottom: 8px; }

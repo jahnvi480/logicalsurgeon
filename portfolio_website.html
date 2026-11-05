@@ -6,6 +6,7 @@
     <title>Dr. Nihar Thakkar | General Surgeon &amp; Surgery Educator</title>
     <meta name="description" content="Meet Dr. Nihar Thakkar, general surgeon and educator behind LogicalSurgeonn. Explore surgery courses, publications and clinic contact details in Mumbai.">
     <link rel="canonical" href="https://jahnvi480.github.io/logicalsurgeon/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_IN">
     <meta property="og:site_name" content="Dr. Nihar Thakkar | LogicalSurgeonn">
@@ -1385,6 +1386,7 @@
     </style>
     <link rel="stylesheet" href="portfolio-redesign.css">
     <script src="portfolio-redesign.js" defer></script>
+    <script src="inquiry.js" defer></script>
 </head>
 <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
@@ -1417,7 +1419,7 @@
         </div>
     </header>
 
-    <main id="main-content">
+    <main id="main-content" tabindex="-1">
         <section class="hero" id="home">
             <div class="container hero-grid">
                 <div class="reveal">
@@ -1438,7 +1440,7 @@
                             <strong>My YouTube Channel</strong>
                             <span>Learn surgery with me</span>
                         </a>
-                        <a class="spotlight-link" href="https://www.google.com/maps/place/Kalakriti+Surgical+Centre(Dr.+Nihar+Thakkar)/data=!4m2!3m1!1s0x0:0x4a5c242502f9193d" target="_blank" rel="noopener">
+                        <a class="spotlight-link" href="https://maps.app.goo.gl/PaVTzom18EZNtBcHA" target="_blank" rel="noopener">
                             <strong>My Clinic Location</strong>
                             <span>Kalakriti Surgical Centre</span>
                         </a>
@@ -1647,27 +1649,29 @@
                     <div class="location-section reveal">
                         <h3>Kalakriti Surgical Centre</h3>
                         <p style="color: var(--muted); margin-bottom: 1rem;">Kalakriti Surgical Centre, Mumbai.</p>
-                        <iframe title="Kalakriti Surgical Centre location on Google Maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.0456789012345!2d72.82756!3d19.07609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4a5c242502f9193d!2sKalakriti%20Surgical%20Centre(Dr.%20Nihar%20Thakkar)!5e0!3m2!1sen!2sin!4v1234567890" width="100%" height="400" style="border: 1px solid var(--line); border-radius: 12px; margin-bottom: 1.5rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe title="Google Maps search for Kalakriti Surgical Centre, Dr. Nihar Thakkar, Mumbai" src="https://maps.google.com/maps?q=Kalakriti%20Surgical%20Centre%20Dr%20Nihar%20Thakkar%20Mumbai&amp;output=embed" width="100%" height="400" style="border: 1px solid var(--line); border-radius: 12px; margin-bottom: 1rem;" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <p class="small">Map shows a clinic-name search, not a verified address pin. Confirm the location before travelling.</p>
+                        <a class="btn btn-secondary" href="https://maps.app.goo.gl/PaVTzom18EZNtBcHA" target="_blank" rel="noopener">Open Clinic Directions ↗</a>
                     </div>
 
-                    <form class="panel form-card reveal" id="leadForm">
+                    <form class="panel form-card reveal" id="leadForm" hidden>
                         <div class="form-grid">
                             <div class="field">
                                 <label for="name">Full Name</label>
-                                <input id="name" name="name" required>
+                                <input id="name" name="name" autocomplete="name" maxlength="120" required>
                             </div>
                             <div class="field">
                                 <label for="phone">WhatsApp Number</label>
-                                <input id="phone" name="phone" required>
+                                <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="30" required>
                             </div>
                             <div class="field">
                                 <label for="email">Email</label>
-                                <input id="email" type="email" name="email" required>
+                                <input id="email" type="email" name="email" autocomplete="email" maxlength="254" required>
                             </div>
                             <div class="field">
                                 <label for="interest">Interested In</label>
                                 <select id="interest" name="interest" required>
-                                    <option value="">Select</option>
+                                    <option value="" disabled selected>Select</option>
                                     <option value="Infusion Batch">Infusion Batch</option>
                                     <option value="Mentorship">1:1 Mentorship</option>
                                     <option value="General Inquiry">General Inquiry</option>
@@ -1675,15 +1679,23 @@
                             </div>
                             <div class="field full">
                                 <label for="message">Message</label>
-                                <textarea id="message" name="message" required></textarea>
+                                <textarea id="message" name="message" maxlength="1500" aria-describedby="formStatus" required></textarea>
                             </div>
                         </div>
 
                         <div class="hero-actions" style="margin-top:0.5rem;">
                             <button class="btn btn-primary" type="submit">Prepare My Inquiry ↗</button>
-                            <a class="btn btn-secondary" id="googleFormBtn" href="https://infusionbatch.lovable.app/" target="_blank" rel="noopener">Open Course Page</a>
+                            <a class="btn btn-secondary" href="courses.html">Explore Courses</a>
                         </div>
-                        <p class="small" id="formStatus" role="status">Opens WhatsApp and email drafts for you to send. Please don’t include medical records.</p>
+                        <p class="small" id="formStatus" role="status">Prepare a draft, then choose WhatsApp or email. Nothing is sent or saved by this website. Please don’t include medical records.</p>
+                        <div class="inquiry-drafts" id="inquiryDrafts" hidden>
+                            <h3>Your inquiry is ready to send</h3>
+                            <div class="hero-actions">
+                                <a class="btn btn-primary" id="whatsappDraft" target="_blank" rel="noopener">Open WhatsApp Draft ↗</a>
+                                <a class="btn btn-secondary" id="emailDraft">Open Email Draft ↗</a>
+                            </div>
+                            <p class="small">Review and send in your chosen app. Your details stay in this form so you can edit or try another option.</p>
+                        </div>
                     </form>
 
                     <aside class="panel contact-card reveal">
@@ -1692,7 +1704,7 @@
                         <div style="margin-top:0.95rem;" class="small">
                             <p>Email: <a href="mailto:drniharthakkar312@gmail.com">drniharthakkar312@gmail.com</a></p>
                             <p>WhatsApp: <a href="https://wa.me/918591568308" target="_blank" rel="noopener">+91 85915 68308</a></p>
-                            <p>Clinic: <a href="https://www.google.com/maps/place/Kalakriti+Surgical+Centre(Dr.+Nihar+Thakkar)/data=!4m2!3m1!1s0x0:0x4a5c242502f9193d" target="_blank" rel="noopener">Open in Google Maps</a></p>
+                            <p>Clinic: <a href="https://maps.app.goo.gl/PaVTzom18EZNtBcHA" target="_blank" rel="noopener">Open in Google Maps</a></p>
                             <p>Location: Mumbai, India</p>
                         </div>
                     </aside>
@@ -1704,9 +1716,11 @@
     <footer class="footer container">
         <p>Dr. Nihar Thakkar | LogicalSurgeonn</p>
         <nav class="footer-pages" aria-label="Explore the website">
+            <a href="./">Home</a>
             <a href="about.html">About</a>
             <a href="courses.html">Courses</a>
             <a href="publications.html">Publications</a>
+            <a href="#contact">Contact</a>
         </nav>
         <p>Clear concepts. Clinical confidence.</p>
     </footer>
@@ -1825,74 +1839,6 @@
 
         goToSlide(0);
         startAutoplay();
-
-        const leadConfig = {
-            doctorEmail: "drniharthakkar312@gmail.com",
-            doctorWhatsapp: "918591568308",
-            googleFormUrl: "https://infusionbatch.lovable.app/",
-            webhookUrl: "https://hook.eu2.make.com/REPLACE_WEBHOOK_ID"
-        };
-
-        const leadForm = document.getElementById("leadForm");
-        const formStatus = document.getElementById("formStatus");
-        const googleFormBtn = document.getElementById("googleFormBtn");
-
-        googleFormBtn.href = leadConfig.googleFormUrl;
-
-        leadForm.addEventListener("submit", async (event) => {
-            event.preventDefault();
-
-            const data = new FormData(leadForm);
-            const payload = {
-                name: data.get("name"),
-                phone: data.get("phone"),
-                email: data.get("email"),
-                interest: data.get("interest"),
-                message: data.get("message"),
-                source: "Website Portfolio",
-                receivedAt: new Date().toISOString()
-            };
-
-            let webhookOk = false;
-            if (leadConfig.webhookUrl && !leadConfig.webhookUrl.includes("REPLACE_WEBHOOK_ID")) {
-                try {
-                    const response = await fetch(leadConfig.webhookUrl, {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(payload)
-                    });
-                    webhookOk = response.ok;
-                } catch (e) {
-                    webhookOk = false;
-                }
-            }
-
-            const waText = encodeURIComponent(
-                "New inquiry for Dr. Nihar Thakkar\n" +
-                "Name: " + payload.name + "\n" +
-                "Phone: " + payload.phone + "\n" +
-                "Email: " + payload.email + "\n" +
-                "Course: " + payload.interest + "\n" +
-                "Message: " + payload.message
-            );
-            window.open("https://wa.me/" + leadConfig.doctorWhatsapp + "?text=" + waText, "_blank", "noopener");
-
-            const subject = encodeURIComponent("New website inquiry - " + payload.name);
-            const body = encodeURIComponent(
-                "Name: " + payload.name + "\n" +
-                "Phone: " + payload.phone + "\n" +
-                "Email: " + payload.email + "\n" +
-                "Course: " + payload.interest + "\n" +
-                "Message: " + payload.message
-            );
-            window.open("mailto:" + leadConfig.doctorEmail + "?subject=" + subject + "&body=" + body, "_blank");
-
-            formStatus.textContent = webhookOk
-                ? "Lead submitted. Automated webhook notification sent and WhatsApp/email drafts opened."
-                : "Please send your inquiry in WhatsApp or your email app. Nothing has been submitted automatically.";
-
-            leadForm.reset();
-        });
 
     </script>
 

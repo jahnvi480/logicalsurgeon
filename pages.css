@@ -91,6 +91,8 @@ img { display: block; max-width: 100%; }
 .site-footer { border-top: 1px solid var(--line); padding-block: 30px; font-size: .75rem; }
 .footer-grid { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 20px 40px; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 10px 24px; }
+.footer-pages { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 20px; font-size: .875rem; }
+.footer-pages a { padding-block: 6px; }
 .footer-note { margin-top: 16px; color: var(--muted); }
 .grid > *, .split > *, .hero-grid > *, .footer-grid > * { min-width: 0; }
 p, h1, h2, h3, a { overflow-wrap: anywhere; }
