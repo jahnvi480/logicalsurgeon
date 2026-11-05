@@ -33,6 +33,6 @@ html { scroll-padding-top: 110px; }
     .site-header .brand-primary { font-size: 22px; }
     .site-header .brand-secondary { font-size: 8px; }
     .site-header .header-course { display: none; }
-    .site-header .primary-nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 12px; }
+    .site-header .primary-nav ul { display: flex; flex-wrap: wrap; gap: 0 20px; }
     .site-header .primary-nav a { font-size: 11px; }
 }
