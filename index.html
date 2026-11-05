@@ -1407,11 +1407,11 @@
             <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">☰</button>
 
             <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#courses">Courses</a></li>
+                <li><a href="./" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="courses.html">Courses</a></li>
                 <li><a href="#testimonials">Reviews</a></li>
-                <li><a href="#research">Publications</a></li>
+                <li><a href="publications.html">Publications</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -1488,36 +1488,12 @@
                             <span class="chip">Clear Concepts</span>
                             <span class="chip">Viva Preparation</span>
                         </div>
+                        <a class="btn btn-secondary" href="about.html">More About Me ↗</a>
                     </div>
                     <div class="about-photo">
                         <img src="WhatsApp Image 2026-06-20 at 16.14.58 (2).jpeg" alt="Dr. Nihar Thakkar teaching" loading="lazy" decoding="async">
                     </div>
                 </article>
-            </div>
-                <details class="background-details" id="qualifications">
-                    <summary>My academic background <span aria-hidden="true">+</span></summary>
-                <div class="qual-grid reveal">
-                    <article class="tile">
-                        <h3>MS - General Surgery</h3>
-                        <div class="meta">GMC Aurangabad</div>
-                    </article>
-                    <article class="tile">
-                        <h3>MBBS</h3>
-                        <div class="meta">JJ Hospital, Mumbai</div>
-                    </article>
-                    <article class="tile">
-                        <h3>Assistant Professor</h3>
-                        <div class="meta">Cooper Medical College (as listed publicly)</div>
-                    </article>
-                </div>
-
-                <div class="image-strip reveal">
-                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.56.jpeg" alt="Dr. Nihar Thakkar in a clinical setting" loading="lazy" decoding="async"></figure>
-                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.57 (1).jpeg" alt="Dr. Nihar Thakkar’s academic work" loading="lazy" decoding="async"></figure>
-                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.58 (1).jpeg" alt="Surgery teaching session" loading="lazy" decoding="async"></figure>
-                    <figure><img src="WhatsApp Image 2026-06-20 at 16.14.57.jpeg" alt="Dr. Nihar Thakkar mentoring students" loading="lazy" decoding="async"></figure>
-                </div>
-                </details>
             </div>
         </section>
 
@@ -1526,6 +1502,7 @@
                 <p class="eyebrow">LogicalSurgeonn · Learn with me</p>
                 <h2 class="section-title reveal">Less memorising.<br>More <em>understanding.</em></h2>
                 <p class="section-subtitle reveal">From your first clinical case to your next viva.</p>
+                <a class="btn btn-secondary page-link" href="courses.html">Explore Courses &amp; Learning Resources ↗</a>
 
                 <div class="course-grid reveal">
                     <article class="tile featured-course">
@@ -1629,6 +1606,7 @@
             <div class="container">
                 <p class="eyebrow">Beyond the classroom</p>
                 <h2 class="section-title reveal">Research &amp; <em>publications.</em></h2>
+                <a class="btn btn-secondary page-link" href="publications.html">Explore My Publications ↗</a>
 
                 <div class="credentials-wrapper reveal">
                     <!-- PUBLICATIONS -->
@@ -1655,50 +1633,6 @@
                         </div>
                     </div>
 
-                    <details class="academic-details">
-                        <summary>Honours &amp; Certifications</summary>
-                    <!-- HONORS -->
-                    <div class="credentials-subsection">
-                        <h3 class="credentials-subheading">Academic Award</h3>
-                        <div class="honors-list">
-                            <article class="honor-card">
-                                <div class="honor-title">1st Prize: Best Free Paper Presenter</div>
-                                <div class="honor-issuer">The Association of Surgeons of India (ASICON 2020) • December 2020</div>
-                                <div class="honor-meta">Research on fistulectomy outcomes in fistula-in-ano.</div>
-                            </article>
-                        </div>
-                    </div>
-
-                    <!-- CERTIFICATIONS -->
-                    <div class="credentials-subsection">
-                        <h3 class="credentials-subheading">Professional Credentials</h3>
-                        <div class="certifications-grid">
-                            <div class="certification-card">
-                                <div class="cert-title">Care of Critically Ill Surgical Patients</div>
-                                <div class="cert-issuer">The Royal College of Surgeons of England</div>
-                                <div class="cert-date">May 2024</div>
-                            </div>
-
-                            <div class="certification-card">
-                                <div class="cert-title">Good Clinical Practice</div>
-                                <div class="cert-issuer">HBTMC Medical Education Portal</div>
-                                <div class="cert-date">February 2024</div>
-                            </div>
-
-                            <div class="certification-card">
-                                <div class="cert-title">Basic Course in Biomedical Research</div>
-                                <div class="cert-issuer">ICMR National Institute of Epidemiology (NIE)</div>
-                                <div class="cert-date">December 2020</div>
-                            </div>
-
-                            <div class="certification-card">
-                                <div class="cert-title">Medical Doctor - Clinical Academic</div>
-                                <div class="cert-issuer">Maharashtra Medical Council - India</div>
-                                <div class="cert-date">June 2018</div>
-                            </div>
-                        </div>
-                    </div>
-                    </details>
                 </div>
             </div>
         </section>
@@ -1769,6 +1703,11 @@
 
     <footer class="footer container">
         <p>Dr. Nihar Thakkar | LogicalSurgeonn</p>
+        <nav class="footer-pages" aria-label="Explore the website">
+            <a href="about.html">About</a>
+            <a href="courses.html">Courses</a>
+            <a href="publications.html">Publications</a>
+        </nav>
         <p>Clear concepts. Clinical confidence.</p>
     </footer>
 
