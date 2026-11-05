@@ -1,0 +1,38 @@
+/* Shared header for every entry page. Load after page-specific styles. */
+html { scroll-padding-top: 110px; }
+.skip-link { z-index: 300; }
+.utility-bar { background: #e8eee8; color: #153c40; font: 400 11px/1.8 "Manrope", sans-serif; letter-spacing: .04em; padding: 10px 0; }
+.utility-bar .container { width: min(1200px, 88%); margin-inline: auto; display: flex; justify-content: space-between; gap: 20px; }
+.utility-bar a { color: #176057; text-decoration: none; white-space: nowrap; }
+.site-header { position: sticky; top: 0; z-index: 100; background: rgb(250 249 245 / 97%); color: #153c40; font: 400 16px/1.8 "Manrope", sans-serif; border-bottom: 1px solid #d7dfd9; backdrop-filter: blur(12px); }
+.site-header .navigation { width: min(1200px, 88%); margin-inline: auto; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 26px; min-height: 92px; padding-block: 18px; font: 400 16px/1.8 "Manrope", sans-serif; }
+.site-header .brand { display: block; flex-shrink: 0; min-width: 0; color: #153c40; text-decoration: none; }
+.site-header .brand-primary { display: block; font: 600 24px/1.2 "Source Serif 4", Georgia, serif; letter-spacing: -.04em; white-space: nowrap; }
+.site-header .brand-secondary { display: block; margin-top: 7px; color: #176057; font: 800 9px/1.8 "Manrope", sans-serif; letter-spacing: .2em; text-transform: uppercase; }
+.site-header .primary-nav { margin-left: auto; order: 0; }
+.site-header .primary-nav ul { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 18px; margin: 0; padding: 0; list-style: none; }
+.site-header .primary-nav li { margin: 0; padding: 0; }
+.site-header .primary-nav a { display: block; min-height: 44px; padding: 11px 0; color: #153c40; font: 700 12px/1.8 "Manrope", sans-serif; text-decoration: none; white-space: nowrap; }
+.site-header .primary-nav a:hover, .site-header .primary-nav a[aria-current="page"] { color: #176057; text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 7px; }
+.site-header .header-course { order: 2; margin: 0; display: inline-flex; align-items: center; justify-content: center; gap: 18px; min-height: 48px; padding: 12px 22px; border: 1px solid #176057; border-radius: 3px; background: #176057; color: white; font: 800 12px/1.8 "Manrope", sans-serif; text-decoration: none; white-space: nowrap; }
+.site-header .header-course:hover { background: #104c46; }
+.site-header a:focus-visible, .utility-bar a:focus-visible { outline: 3px solid #176057; outline-offset: 5px; }
+@media (max-width: 1100px) {
+    html { scroll-padding-top: 185px; }
+    .site-header .primary-nav { order: 3; flex-basis: 100%; margin-left: 0; padding-top: 10px; border-top: 1px solid #d7dfd9; }
+    .site-header .primary-nav ul { gap: 4px 26px; }
+    .site-header .header-course { margin-left: auto; }
+}
+@media (max-width: 700px) {
+    html { scroll-padding-top: 205px; }
+    .utility-bar { font-size: 9px; }
+    .utility-bar .container, .site-header .navigation { width: 90%; }
+    .utility-bar .container > span { max-width: 24ch; }
+    .utility-bar a { align-self: center; }
+    .site-header .navigation { gap: 12px; padding-block: 14px; }
+    .site-header .brand-primary { font-size: 22px; }
+    .site-header .brand-secondary { font-size: 8px; }
+    .site-header .header-course { display: none; }
+    .site-header .primary-nav ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 12px; }
+    .site-header .primary-nav a { font-size: 11px; }
+}

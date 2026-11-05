@@ -8,6 +8,11 @@ GitHub Pages deployment for Dr. Nihar Thakkar's portfolio site.
 - Journal papers and chapter: `publications.html`.
 - All canonical pages appear in `sitemap.xml`.
 
+## Shared navigation
+Every entry page uses the same header markup and `site-header.css`, loaded after
+page-specific styles. Navigation stays visible without JavaScript at all widths.
+Keep its stylesheet version in sync across pages when changing the shared header.
+
 ## Inquiry flow and privacy
 `inquiry.js` prepares WhatsApp and email draft links locally. It does not submit,
 store, or automatically send inquiries. Visitors review and send in their app.

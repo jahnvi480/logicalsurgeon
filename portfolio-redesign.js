@@ -25,11 +25,6 @@
     document.addEventListener('keydown', event => {
         if (event.key === 'Escape') {
             if (!panel.hidden) setOpen(false, true);
-            const menu = document.getElementById('menuToggle');
-            if (menu.getAttribute('aria-expanded') === 'true') {
-                menu.click();
-                menu.focus();
-            }
         }
     });
 
