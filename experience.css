@@ -1,0 +1,30 @@
+/* Progressive enhancements: all photos and copy stay visible without scripts. */
+.photo-gallery { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+.photo-card { margin: 0; min-width: 0; }
+.photo-card a { display: block; position: relative; overflow: hidden; border-radius: 6px; background: #e5eeea; }
+.photo-card img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center; }
+.photo-card:first-child img { object-position: center 45%; }
+.photo-card:nth-child(2) img { object-position: center 40%; }
+.photo-card figcaption { padding-top: 12px; color: #153c40; font: 600 13px/1.6 "Manrope", sans-serif; }
+.photo-card a::after { content: "↗"; position: absolute; right: 12px; bottom: 12px; display: grid; place-items: center; width: 40px; height: 40px; background: #fffefa; color: #153c40; border-radius: 50%; }
+.photo-dialog { width: min(940px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 18px; border: 1px solid #d7dfd9; border-radius: 8px; background: #fffefa; color: #153c40; overflow: auto; }
+.photo-dialog::backdrop { background: rgb(9 30 29 / 85%); }
+.photo-dialog img { display: block; width: 100%; height: auto; max-height: 72dvh; object-fit: contain; }
+.photo-dialog button { display: block; min-height: 44px; margin: 0 0 12px auto; padding: 8px 18px; border: 1px solid #176057; background: #176057; color: white; font: 700 13px "Manrope", sans-serif; cursor: pointer; }
+.photo-dialog p { margin: 12px 0 0; font: 500 14px/1.6 "Manrope", sans-serif; }
+.photo-dialog button:focus-visible { outline: 3px solid #176057; outline-offset: 4px; }
+.clinic-scrubs { max-width: 350px; }
+.clinic-scrubs img { aspect-ratio: 3 / 4; object-fit: cover; object-position: center 45%; }
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .photo-card img { transition: transform 240ms ease; }
+    .photo-card a:hover img { transform: scale(1.035); }
+    .spotlight-link, .card, .tile { transition: transform 180ms ease, box-shadow 180ms ease; }
+    .spotlight-link:hover, .card:hover { transform: translateY(-3px); }
+}
+@media (max-width: 700px) {
+    .photo-gallery { gap: 16px; grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .photo-card figcaption { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .photo-card img, .spotlight-link, .card, .tile { transition: none; transform: none; }
+}

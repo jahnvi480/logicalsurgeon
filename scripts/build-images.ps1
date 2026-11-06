@@ -29,6 +29,10 @@ try {
     Save-ResizedImage 'WhatsApp Image 2026-06-20 at 16.17.40.jpeg' 'dr-nihar-portrait-900.jpg' 900
     Save-ResizedImage 'WhatsApp Image 2026-06-20 at 16.17.40.jpeg' 'dr-nihar-portrait-600.jpg' 600
     Save-ResizedImage 'WhatsApp Image 2026-06-20 at 16.14.57 (2).jpeg' 'dr-nihar-teaching.jpg' 725
+    Save-ResizedImage 'WhatsApp Image 2026-06-20 at 16.14.57.jpeg' 'dr-nihar-scrubs.jpg' 600
+    Save-ResizedImage 'WhatsApp Image 2026-06-20 at 16.14.56.jpeg' 'dr-nihar-speaking.jpg' 600
+    Save-ResizedImage 'WhatsApp Image 2026-06-20 at 16.14.58 (1).jpeg' 'dr-nihar-workshop.jpg' 1000
+    Save-ResizedImage 'WhatsApp Image 2026-06-20 at 16.14.57 (1).jpeg' 'dr-nihar-group-session.jpg' 1000
 
     $bitmap = New-Object System.Drawing.Bitmap(1200, 630)
     $graphics = [System.Drawing.Graphics]::FromImage($bitmap)

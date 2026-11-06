@@ -8,6 +8,12 @@ const origin = 'https://jahnvi480.github.io/logicalsurgeon/';
 const pages = ['index.html', 'about.html', 'clinic.html', 'courses.html', 'publications.html', 'privacy.html'];
 const read = name => readFileSync(resolve(root, name), 'utf8');
 assert.equal(read('index.html'), read('portfolio_website.html'), 'Homepage copies differ');
+const home = read('index.html');
+assert.equal([...home.matchAll(/class="js-photo-viewer"/g)].length, 4, 'Four approved gallery photographs');
+for (const name of ['index.html', 'portfolio_website.html', 'about.html', 'clinic.html', 'courses.html']) {
+    assert.ok(read(name).includes('experience.css?v=1'), `${name}: enhancement CSS`);
+    assert.ok(read(name).includes('experience.js?v=1'), `${name}: enhancement JS`);
+}
 const sitemap = read('sitemap.xml');
 const locations = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]);
 assert.equal(locations.length, pages.length, 'Sitemap must contain six canonical pages');
