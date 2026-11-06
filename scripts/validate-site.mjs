@@ -37,6 +37,8 @@ for (const [index, [name, area, shareId]] of hospitals.entries()) {
 }
 assert.ok(associations.includes('Confirm the hospital, appointment time and availability before travelling.'), 'Hospital appointment confirmation notice');
 assert.ok(read('about.html').includes('href="clinic.html#hospital-associations"'), 'About: hospital associations link');
+assert.ok(home.includes('class="container clinical-layout"'), 'Homepage: photo-led clinical feature');
+assert.ok(home.includes('class="clinical-photo"'), 'Homepage: clinical portrait');
 assert.equal([...home.matchAll(/class="js-photo-viewer"/g)].length, 4, 'Four approved gallery photographs');
 for (const name of ['index.html', 'portfolio_website.html', 'about.html', 'clinic.html', 'courses.html']) {
     assert.ok(read(name).includes('experience.css?v=1'), `${name}: enhancement CSS`);
@@ -54,6 +56,9 @@ for (const name of [...pages, 'portfolio_website.html']) {
     assert.equal([...html.matchAll(/property="og:image"/g)].length, 1, `${name}: one social image`);
     assert.ok(html.includes(`${origin}social-preview.jpg`), `${name}: branded image`);
     assert.ok(html.includes('site-header.css?v=2'), `${name}: shared header version`);
+    const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(match => match[1]);
+    assert.equal(styles.filter(href => href === 'visual-system.css?v=1').length, 1, `${name}: one shared visual layer`);
+    assert.equal(styles.at(-1), 'visual-system.css?v=1', `${name}: visual layer loads last`);
     const nav = html.match(/<nav class="primary-nav"[\s\S]*?<\/nav>/)?.[0];
     assert.ok(nav, `${name}: primary navigation`);
     const normalNav = nav.replace(/ aria-current="page"/g, '');

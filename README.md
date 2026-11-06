@@ -20,6 +20,18 @@ Contact. Footer links include Clinic and Privacy & medical information. The home
 hero gives Clinic & Appointments and Courses & Mentorship equal button styling;
 their display order does not imply a hierarchy between surgery and teaching.
 
+## Visual system
+All seven entry pages load `visual-system.css?v=1` after their existing styles.
+It owns the shared dark-teal/ivory/gold presentation, typographic scale, rounded
+buttons, photo framing, hospital cards and responsive refinements. Keep it last
+in the stylesheet order. The homepage uses a photographic editorial hero,
+asymmetric gallery and a photo-led clinical section; the clinical and educational
+hero actions retain equal styling. Existing content, native navigation, enquiry
+logic and photograph viewer remain unchanged. Decorative effects require no new
+JavaScript or dependencies; reduced-motion preferences disable transitions.
+Check all pages at 320, 375, 768, 1024 and 1440 pixels before publishing visual
+changes, including keyboard focus, gallery viewing and the local enquiry drafts.
+
 ## Identity and content boundaries
 The owner confirms that Dr. Nihar Thakkar is co-founder of both Kalakriti
 Healthsquare and LogicalSurgeonn. Clinical practice and surgical education must
