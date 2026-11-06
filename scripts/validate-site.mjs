@@ -17,6 +17,26 @@ assert.ok(clinic.includes('HBT Medical College &amp; RN Cooper Hospital'), 'Clin
 assert.ok(clinic.includes('Nearly 12 years of surgical training and hospital service'), 'Clinic: distinguish training and service from independent practice');
 assert.ok(clinic.includes('Aashirwad Hospital'), 'Clinic: supplied hospital practice');
 assert.ok(clinic.includes('not emergency services'), 'Clinic: emergency enquiry warning');
+const associations = clinic.match(/<section[^>]*id="hospital-associations"[\s\S]*?<\/section>/)?.[0];
+assert.ok(associations, 'Clinic: dedicated hospital associations section');
+const hospitals = [
+    ['Infinity Multispeciality Hospital', 'Goregaon West', 'kpPGA3wZObO05J6dJ'],
+    ['Aashirwad Hospital', 'Andheri West', 'Y96KheowVaSS5KaeP'],
+    ['CritiCare Asia Multispeciality Hospital', 'Andheri West', 'se2UJksTKDN4U3TlH'],
+    ['CritiCare Asia Multispeciality Hospital', 'Malad West', 'Maf2LV2pU4E5d3YvX'],
+    ['Mandapeshwar Nursing Home', 'Borivali West', 'RUZygmEiyBWt56mPW'],
+    ['Oscar Superspeciality Hospital', 'Goregaon West', '2qH6JvzhkU1OpfMiO']
+];
+const hospitalCards = [...associations.matchAll(/<article class="card">([\s\S]*?)<\/article>/g)].map(match => match[1]);
+assert.equal(hospitalCards.length, hospitals.length, 'Clinic: six hospital locations');
+for (const [index, [name, area, shareId]] of hospitals.entries()) {
+    const card = hospitalCards[index];
+    assert.ok(card.includes(`<h3>${name}</h3>`), `Hospital ${index + 1}: name`);
+    assert.ok(card.includes(`<p>${area}, Mumbai</p>`), `Hospital ${index + 1}: branch`);
+    assert.ok(card.includes(`href="https://share.google/${shareId}"`), `Hospital ${index + 1}: supplied listing link`);
+}
+assert.ok(associations.includes('Confirm the hospital, appointment time and availability before travelling.'), 'Hospital appointment confirmation notice');
+assert.ok(read('about.html').includes('href="clinic.html#hospital-associations"'), 'About: hospital associations link');
 assert.equal([...home.matchAll(/class="js-photo-viewer"/g)].length, 4, 'Four approved gallery photographs');
 for (const name of ['index.html', 'portfolio_website.html', 'about.html', 'clinic.html', 'courses.html']) {
     assert.ok(read(name).includes('experience.css?v=1'), `${name}: enhancement CSS`);

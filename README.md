@@ -73,6 +73,22 @@ copy therefore uses non-current-specific academic experience wording. The owner
 asked to include all information but has not resolved that current-role timing.
 No hospital addresses, dates, fees or availability are inferred from the image.
 
+On 6 November 2026 the owner confirmed associations with six hospital locations.
+The supplied Google share links were resolved in a browser to identify names and
+branches; those listings identify locations, not independent proof of affiliation:
+- Infinity Multispeciality Hospital, Goregaon West: https://share.google/kpPGA3wZObO05J6dJ
+- Aashirwad Hospital, Andheri West: https://share.google/Y96KheowVaSS5KaeP
+- CritiCare Asia Multispeciality Hospital, Andheri West: https://share.google/se2UJksTKDN4U3TlH
+- CritiCare Asia Multispeciality Hospital, Malad West: https://share.google/Maf2LV2pU4E5d3YvX
+- Mandapeshwar Nursing Home, Borivali West: https://share.google/RUZygmEiyBWt56mPW
+- Oscar Superspeciality Hospital, Goregaon West: https://share.google/2qH6JvzhkU1OpfMiO
+
+Keep the two CritiCare branches separate. These associations are separate from
+training/service history and do not imply employment titles, admitting privileges,
+fixed consulting hours or guaranteed availability. The Clinic page retains the
+owner-supplied listing links and asks visitors to confirm appointment details.
+Hospital-wide ratings/reviews must not be presented as reviews of Dr. Thakkar.
+
 Owner confirmed on 6 November 2026 that all supplied photographs are approved
 for public use, including the group-session image. Gallery captions do not
 identify participants or imply patient outcomes. New scrubs, speaking, workshop
