@@ -55,6 +55,24 @@ The 600-pixel portrait is about 61% smaller than the original; the 900-pixel
 portrait is about 24% smaller. The teaching image has only a small byte reduction.
 
 ## Validation
+Surgical profile supplied by the owner on 6 November 2026: Consultant General
+Surgeon; MBBS, MS General Surgery, CCrISP (Royal College of Surgeons, England);
+over a decade of experience; Assistant Professor at HBT Medical College & RN
+Cooper Hospital. Owner-supplied specialties: laparoscopic surgery, anorectal
+surgery, diabetic foot management, emergency surgical procedures and trauma
+surgery. These are owner-provided claims, not independently certified by this
+repository. No round-the-clock availability, outcome guarantee or emergency
+booking service is implied.
+The subsequent owner-supplied profile screenshot clarifies the experience as
+nearly 12 years of surgical training and hospital service, not 12 years of
+independent consultant practice. It supplies Sir J.J. Group of Hospitals,
+Government Medical College Aurangabad, Bharatratna Dr. Babasaheb Ambedkar Hospital,
+Dr. R. N. Cooper Hospital and practice at Aashirwad Hospital. It describes the
+Assistant Professor role in the past tense, unlike the earlier text; published
+copy therefore uses non-current-specific academic experience wording. The owner
+asked to include all information but has not resolved that current-role timing.
+No hospital addresses, dates, fees or availability are inferred from the image.
+
 Owner confirmed on 6 November 2026 that all supplied photographs are approved
 for public use, including the group-session image. Gallery captions do not
 identify participants or imply patient outcomes. New scrubs, speaking, workshop

@@ -9,6 +9,14 @@ const pages = ['index.html', 'about.html', 'clinic.html', 'courses.html', 'publi
 const read = name => readFileSync(resolve(root, name), 'utf8');
 assert.equal(read('index.html'), read('portfolio_website.html'), 'Homepage copies differ');
 const home = read('index.html');
+const clinic = read('clinic.html');
+for (const specialty of ['Laparoscopic Surgery', 'Anorectal Surgery', 'Diabetic Foot Management', 'Emergency Surgical Procedures', 'Trauma Surgery']) {
+    assert.ok(clinic.includes(`<li>${specialty}</li>`), `Clinic: missing specialty ${specialty}`);
+}
+assert.ok(clinic.includes('HBT Medical College &amp; RN Cooper Hospital'), 'Clinic: supplied academic affiliation');
+assert.ok(clinic.includes('Nearly 12 years of surgical training and hospital service'), 'Clinic: distinguish training and service from independent practice');
+assert.ok(clinic.includes('Aashirwad Hospital'), 'Clinic: supplied hospital practice');
+assert.ok(clinic.includes('not emergency services'), 'Clinic: emergency enquiry warning');
 assert.equal([...home.matchAll(/class="js-photo-viewer"/g)].length, 4, 'Four approved gallery photographs');
 for (const name of ['index.html', 'portfolio_website.html', 'about.html', 'clinic.html', 'courses.html']) {
     assert.ok(read(name).includes('experience.css?v=1'), `${name}: enhancement CSS`);
