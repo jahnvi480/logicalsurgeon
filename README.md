@@ -17,7 +17,28 @@ Keep its stylesheet version in sync across pages when changing the shared header
 All pages load `site-header.css?v=2`; secondary pages load `pages.css?v=2`.
 The seven primary links are Home, About, Clinic, Courses, Reviews, Publications and
 Contact. Footer links include Clinic and Privacy & medical information. The home
-hero routes students to Courses and patients to Clinic.
+hero gives Clinic & Appointments and Courses & Mentorship equal button styling;
+their display order does not imply a hierarchy between surgery and teaching.
+
+## Identity and content boundaries
+The owner confirms that Dr. Nihar Thakkar is co-founder of both Kalakriti
+Healthsquare and LogicalSurgeonn. Clinical practice and surgical education must
+receive equal emphasis, with neither presented as a secondary role. These
+organization spellings are provisional pending owner confirmation of exact
+branding/legal names. Their legal relationship, and the relationship between
+Kalakriti Healthsquare and the existing Kalakriti Surgical Centre directions
+label, await owner clarification. Do not assume naming equivalence or rename the
+existing directions. Co-founder roles are user-confirmed, not independently
+verified online.
+
+The homepage teaching counters belong in the Courses section, not the hero.
+Existing quotations remain explicitly student reviews and are unchanged. Patient
+reviews have not been supplied or verified; do not fabricate reviews, ratings or
+medical outcomes, and add no patient review cards pending an approved source.
+Online clinic details could not be verified (Google challenge and unsuccessful
+Maps short-link extraction). Do not invent services, addresses, hours or booking
+promises. Retain original source assets and supplied academic credentials without
+inflating academic titles.
 
 ## Image assets
 The homepage and About portrait use responsive JPGs derived from the existing

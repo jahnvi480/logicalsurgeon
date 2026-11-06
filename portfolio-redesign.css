@@ -58,7 +58,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 em { font-weight: inherit; color: var(--primary); }
 .hero p:not(.hero-statement) { max-width: 43ch; font-size: 14px; line-height: 1.8; }
 .hero-actions { gap: 12px; margin-top: 25px; }
-.spotlight-strip { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
+.spotlight-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; margin-top: 32px; }
+.hero .hero-actions .btn { flex: 1 1 200px; justify-content: center; text-align: center; }
 .spotlight-link { border: 0; border-top: 1px solid #bdcdc4; border-radius: 0; padding: 15px 0; background: transparent; box-shadow: none; }
 .spotlight-link strong { font-size: 11px; }
 .spotlight-link span { font-size: 10px; line-height: 1.6; margin-top: 5px; }
