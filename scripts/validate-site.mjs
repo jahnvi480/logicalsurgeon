@@ -10,6 +10,37 @@ const read = name => readFileSync(resolve(root, name), 'utf8');
 assert.equal(read('index.html'), read('portfolio_website.html'), 'Homepage copies differ');
 const home = read('index.html');
 const clinic = read('clinic.html');
+const reviewSource = 'https://www.google.com/search?kgmid=/g/11yqk73vdz&hl=en-IN&q=Kalakriti+Surgical+Centre+Dr.+Nihar+Thakkar#lrd=0x3be7b74fc33d230f:0x4a5c242502f9193d,1,,,,';
+const reviewExcerpts = [
+    ['Shingre Akshata', 'Dr. Nihar was very patient while listening to the issue.'],
+    ['Gunja Karia', 'Dr. Nihar Thakkar is very kind and helpful.'],
+    ['rudra dave', 'Takes the time to listen and explain complex medical concepts simply.']
+];
+const reviewNote = 'Selected excerpts from public Google reviews of Kalakriti Surgical Centre. Individual experiences are not a guarantee of treatment outcomes.';
+for (const name of ['index.html', 'portfolio_website.html']) {
+    const html = read(name);
+    assert.equal([...html.matchAll(/id="google-reviews"/g)].length, 1, `${name}: one Google review section`);
+    const section = html.match(/<section\b[^>]*id="google-reviews"[^>]*>([\s\S]*?)<\/section>/)?.[1];
+    assert.ok(section, `${name}: Google review excerpts`);
+    assert.ok(html.indexOf('id="google-reviews"') < html.indexOf('id="testimonials"'), `${name}: excerpts before student testimonials`);
+    assert.ok(section.includes('<p class="eyebrow">Google review excerpts</p>'), `${name}: attribution label`);
+    assert.ok(section.includes('<h2 class="section-title" id="google-reviews-title">Listening. Clarity. Care.</h2>'), `${name}: review heading`);
+    assert.ok(section.includes(`<p class="section-subtitle">${reviewNote}</p>`), `${name}: source and outcome notice`);
+    const cards = [...section.matchAll(/<figure class="google-review-card">([\s\S]*?)<\/figure>/g)].map(match => match[1]);
+    assert.equal([...section.matchAll(/<figure\b/g)].length, 3, `${name}: exactly three figures`);
+    assert.equal([...section.matchAll(/<blockquote\b/g)].length, 3, `${name}: exactly three quotes`);
+    assert.equal([...section.matchAll(/<a\b/g)].length, 3, `${name}: exactly three source links`);
+    assert.equal(cards.length, reviewExcerpts.length, `${name}: three static review cards`);
+    for (const [index, [reviewer, excerpt]] of reviewExcerpts.entries()) {
+        const expected = `<blockquote><p>${excerpt}</p></blockquote>\n                        <figcaption>\n                            <strong>${reviewer}</strong>\n                            <span>Google reviewer</span>\n                            <a href="${reviewSource.replaceAll('&', '&amp;')}">Read on Google</a>\n                        </figcaption>`;
+        assert.equal(cards[index].trim().replaceAll('\r\n', '\n'), expected, `${name}: exact excerpt, displayed name and escaped source ${index + 1}`);
+    }
+    assert.ok(!/★|\bstars?\b|rating|<script\b|schema\.org/i.test(section), `${name}: no rating, schema or dynamic review content`);
+    const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(match => match[1]);
+    assert.equal(styles.filter(href => href === 'google-reviews.css?v=1').length, 1, `${name}: one review stylesheet`);
+    assert.ok(styles.indexOf('google-reviews.css?v=1') < styles.indexOf('visual-system.css?v=1'), `${name}: review styles before final visual layer`);
+}
+assert.ok(clinic.includes('href="./#google-reviews"'), 'Clinic: public review excerpts link');
 for (const specialty of ['Laparoscopic Surgery', 'Anorectal Surgery', 'Diabetic Foot Management', 'Emergency Surgical Procedures', 'Trauma Surgery']) {
     assert.ok(clinic.includes(`<li>${specialty}</li>`), `Clinic: missing specialty ${specialty}`);
 }

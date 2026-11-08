@@ -1,0 +1,43 @@
+/* Static, attributed excerpts; independent of the student carousel. */
+#google-reviews { background: var(--editorial-paper, #f7f5ef); }
+.google-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 32px;
+}
+.google-review-card {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin: 0;
+    padding: 28px;
+    border: 1px solid var(--editorial-border, #d7ddd4);
+    border-top: 3px solid #176057;
+    border-radius: 14px;
+    background: #fffdf8;
+    color: #102f32;
+    overflow-wrap: anywhere;
+}
+.google-review-card blockquote { margin: 0; }
+.google-review-card blockquote p {
+    font: 500 clamp(1.2rem, 1.8vw, 1.5rem)/1.6 "Source Serif 4", Georgia, serif;
+}
+.google-review-card figcaption { display: grid; gap: 6px; margin-top: auto; }
+.google-review-card figcaption strong { font-size: 0.95rem; }
+.google-review-card figcaption span { font-size: 0.85rem; color: #4f615b; }
+.google-review-card a {
+    justify-self: start;
+    padding-block: 10px;
+    color: #176057;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+.google-review-card a:hover { text-decoration-thickness: 2px; }
+.google-review-card a:focus-visible { outline: 3px solid #176057; outline-offset: 4px; }
+@media (max-width: 700px) {
+    .google-reviews-grid { grid-template-columns: 1fr; }
+    .google-review-card { padding: 24px; }
+}

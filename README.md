@@ -44,9 +44,23 @@ existing directions. Co-founder roles are user-confirmed, not independently
 verified online.
 
 The homepage teaching counters belong in the Courses section, not the hero.
-Existing quotations remain explicitly student reviews and are unchanged. Patient
-reviews have not been supplied or verified; do not fabricate reviews, ratings or
-medical outcomes, and add no patient review cards pending an approved source.
+Existing quotations remain explicitly student reviews and are unchanged. On
+8 November 2026, three public reviews of Kalakriti Surgical Centre Dr. Nihar
+Thakkar were verified by directly opening Google search and its native “View all
+Google reviews” panel. At the owner's request, the homepage publishes only these
+short, exact excerpts, preserving displayed reviewer names and case:
+- Shingre Akshata: “Dr. Nihar was very patient while listening to the issue.”
+- Gunja Karia: “Dr. Nihar Thakkar is very kind and helpful.”
+- rudra dave: “Takes the time to listen and explain complex medical concepts simply.”
+
+Each card links to the same source listing (not a reviewer-specific permalink):
+https://www.google.com/search?kgmid=/g/11yqk73vdz&hl=en-IN&q=Kalakriti+Surgical+Centre+Dr.+Nihar+Thakkar#lrd=0x3be7b74fc33d230f:0x4a5c242502f9193d,1,,,,
+This is attributed publication of selected public excerpts, not endorsement by
+Google; no reviewer permission is claimed. No medical details, star ratings,
+aggregate ratings or review schema are added. Individual experiences are not a
+guarantee of treatment outcomes. Do not fabricate additional reviews or outcomes.
+The static `#google-reviews` section precedes the unchanged student carousel;
+`google-reviews.css?v=1` loads before the final shared visual layer on both homes.
 On 8 November 2026 the owner supplied clinical activity totals: 100+ patients
 treated, 30+ laparoscopic surgeries, 50+ open surgeries and 20+ upper GI
 endoscopies (OGD). These are owner-provided totals, not independently audited
@@ -128,7 +142,9 @@ never hide content and respect reduced-motion preferences.
 
 Run `node scripts/validate-site.mjs` for canonical URLs, sitemap membership,
 shared navigation, social metadata, JSON-LD, local links/anchors and homepage
-parity. Also check layouts in a real browser and run `git diff --check`.
+parity, plus exact Google excerpts, displayed names, card counts, escaped source
+links and review stylesheet order. Also check layouts in a real browser and run
+`git diff --check`.
 
 ## Inquiry flow and privacy
 `inquiry.js` prepares WhatsApp and email draft links locally. It does not submit,
