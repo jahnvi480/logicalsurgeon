@@ -41,6 +41,7 @@ assert.ok(home.includes('class="container clinical-layout"'), 'Homepage: photo-l
 assert.ok(home.includes('class="clinical-photo"'), 'Homepage: clinical portrait');
 const clinicalCounters = home.match(/<div class="counters clinical-counters"[\s\S]*?<\/div>\s*<p class="small">/)?.[0];
 assert.ok(clinicalCounters, 'Homepage: clinical counters');
+assert.deepEqual([...clinicalCounters.matchAll(/data-target="(\d+)"/g)].map(match => Number(match[1])), [100, 50, 30, 20], 'Clinical counter display order');
 for (const [value, label] of [[100, 'Patients Treated'], [30, 'Laparoscopic Surgeries'], [50, 'Open Surgeries'], [20, 'Upper GI Endoscopies (OGD)']]) {
     assert.ok(clinicalCounters.includes(`aria-label="${value}+ ${label}"`), `Clinical counter: ${label}`);
     assert.ok(clinicalCounters.includes(`data-target="${value}" data-suffix="+" aria-hidden="true">${value}+</div>`), `Clinical counter final fallback: ${value}`);
