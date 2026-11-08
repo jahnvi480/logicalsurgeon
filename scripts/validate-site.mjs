@@ -69,7 +69,7 @@ for (const name of [...pages, 'portfolio_website.html']) {
     assert.ok(html.includes('site-header.css?v=2'), `${name}: shared header version`);
     for (const match of html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
         if (match[2].includes('Explore Courses')) {
-            assert.equal(match[1], 'https://learn.logicalsurgeon.com/v2/storefront', `${name}: course storefront`);
+            assert.equal(match[1], 'https://learn.logicalsurgeon.com/web/lite/store/69b9b353cfc64efd62001406', `${name}: course storefront`);
         }
     }
     const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(match => match[1]);
