@@ -39,6 +39,16 @@ assert.ok(associations.includes('Confirm the hospital, appointment time and avai
 assert.ok(read('about.html').includes('href="clinic.html#hospital-associations"'), 'About: hospital associations link');
 assert.ok(home.includes('class="container clinical-layout"'), 'Homepage: photo-led clinical feature');
 assert.ok(home.includes('class="clinical-photo"'), 'Homepage: clinical portrait');
+const clinicalCounters = home.match(/<div class="counters clinical-counters"[\s\S]*?<\/div>\s*<p class="small">/)?.[0];
+assert.ok(clinicalCounters, 'Homepage: clinical counters');
+for (const [value, label] of [[100, 'Patients Treated'], [30, 'Laparoscopic Surgeries'], [50, 'Open Surgeries'], [20, 'Upper GI Endoscopies (OGD)']]) {
+    assert.ok(clinicalCounters.includes(`aria-label="${value}+ ${label}"`), `Clinical counter: ${label}`);
+    assert.ok(clinicalCounters.includes(`data-target="${value}" data-suffix="+" aria-hidden="true">${value}+</div>`), `Clinical counter final fallback: ${value}`);
+}
+assert.ok(!home.includes('let countersStarted'), 'No shared global counter-start lock');
+assert.ok(home.includes('counters.js?v=1'), 'Progressive counter script');
+assert.ok(!read('courses.html').includes('Browse learning links'), 'Remove redundant learning-links button');
+assert.ok(read('courses.html').includes('href="https://infusionbatch.lovable.app/">Explore Infusion Batch'), 'Dedicated Infusion Batch link');
 assert.equal([...home.matchAll(/class="js-photo-viewer"/g)].length, 4, 'Four approved gallery photographs');
 for (const name of ['index.html', 'portfolio_website.html', 'about.html', 'clinic.html', 'courses.html']) {
     assert.ok(read(name).includes('experience.css?v=1'), `${name}: enhancement CSS`);
@@ -56,6 +66,11 @@ for (const name of [...pages, 'portfolio_website.html']) {
     assert.equal([...html.matchAll(/property="og:image"/g)].length, 1, `${name}: one social image`);
     assert.ok(html.includes(`${origin}social-preview.jpg`), `${name}: branded image`);
     assert.ok(html.includes('site-header.css?v=2'), `${name}: shared header version`);
+    for (const match of html.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)) {
+        if (match[2].includes('Explore Courses')) {
+            assert.equal(match[1], 'https://learn.logicalsurgeon.com/v2/storefront', `${name}: course storefront`);
+        }
+    }
     const styles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)"/g)].map(match => match[1]);
     assert.equal(styles.filter(href => href === 'visual-system.css?v=1').length, 1, `${name}: one shared visual layer`);
     assert.equal(styles.at(-1), 'visual-system.css?v=1', `${name}: visual layer loads last`);

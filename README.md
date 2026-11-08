@@ -47,6 +47,23 @@ The homepage teaching counters belong in the Courses section, not the hero.
 Existing quotations remain explicitly student reviews and are unchanged. Patient
 reviews have not been supplied or verified; do not fabricate reviews, ratings or
 medical outcomes, and add no patient review cards pending an approved source.
+On 8 November 2026 the owner supplied clinical activity totals: 100+ patients
+treated, 30+ laparoscopic surgeries, 50+ open surgeries and 20+ upper GI
+endoscopies (OGD). These are owner-provided totals, not independently audited
+outcomes or success rates. No time period is supplied, and the categories can
+overlap; do not sum them. The owner lists hernia, appendix, hydrocele, anal fissure
+and haemorrhoid procedures as examples of open surgery.
+The homepage displays clinical and teaching statistics in separate sections.
+`counters.js` animates each group independently on entry; final totals remain in
+the HTML for no-script fallback and accessible names. Reduced motion restores
+final totals and cancels animation frames.
+Run `node scripts/test-counters.mjs` to validate the independent animation
+lifecycle, one-shot completion and reduced-motion/static fallbacks.
+
+All “Explore Courses” buttons now use the owner-supplied storefront URL:
+https://learn.logicalsurgeon.com/v2/storefront. The local Courses page remains a
+landing page for courses and mentorship; its redundant “Browse learning links”
+button is removed. “Explore Infusion Batch” uses https://infusionbatch.lovable.app/.
 Online clinic details could not be verified (Google challenge and unsuccessful
 Maps short-link extraction). Do not invent services, addresses, hours or booking
 promises. Retain original source assets and supplied academic credentials without
