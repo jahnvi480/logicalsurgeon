@@ -74,8 +74,9 @@ final totals and cancels animation frames.
 Run `node scripts/test-counters.mjs` to validate the independent animation
 lifecycle, one-shot completion and reduced-motion/static fallbacks.
 
-All “Explore Courses” buttons now use the owner-supplied storefront URL:
-https://learn.logicalsurgeon.com/web/lite/store/69b9b353cfc64efd62001406. The local Courses page remains a
+All “Explore Courses” buttons temporarily use the existing owner-supplied Beacons
+resource hub, https://beacons.ai/niharthakkar, while the TagMango custom-domain
+connection is being resolved. The local Courses page remains a
 landing page for courses and mentorship; its redundant “Browse learning links”
 button is removed. “Explore Infusion Batch” uses https://infusionbatch.lovable.app/.
 Online clinic details could not be verified (Google challenge and unsuccessful
