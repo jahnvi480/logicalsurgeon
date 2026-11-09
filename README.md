@@ -142,7 +142,9 @@ never hide content and respect reduced-motion preferences.
 
 Run `node scripts/validate-site.mjs` for canonical URLs, sitemap membership,
 shared navigation, social metadata, JSON-LD, local links/anchors and homepage
-parity, plus exact Google excerpts, displayed names, card counts, escaped source
+byte parity, custom-domain CNAME and robots sitemap, absence of the old GitHub
+origin in all root HTML entries and the sitemap, plus exact Google excerpts,
+displayed names, card counts, escaped source
 links and review stylesheet order. Also check layouts in a real browser and run
 `git diff --check`.
 
@@ -170,12 +172,33 @@ the clinic address and obtain the official embed before replacing the search.
 
 ## Deployment and remaining owner setup
 GitHub Pages publishes the repository root on `main` at
-https://jahnvi480.github.io/logicalsurgeon/.
+https://logicalsurgeon.com/. Keep the existing `CNAME` set to `logicalsurgeon.com`.
 Keep the two homepage files identical and validate internal links, metadata,
 responsive layouts, inquiry drafts and `git diff --check` before publishing.
 
-Search Console ownership verification and sitemap submission require the site
-owner's Google account. More pages or metadata cannot guarantee search rankings.
+The root `robots.txt` is valid for this custom-domain deployment: crawlers read
+https://logicalsurgeon.com/robots.txt. It allows crawling and advertises
+https://logicalsurgeon.com/sitemap.xml; the former project-subpath restriction
+does not apply at the custom-domain root. Crawl permission does not guarantee
+indexing, and Search Console verification is not a prerequisite for indexing.
+
+Owner actions after deployment (not performed by this repository update):
+1. In Google Search Console, add the Domain property `logicalsurgeon.com` and
+	verify ownership using Google's supplied DNS TXT record. Add that record
+	without replacing existing DNS records; preserve email MX, SPF, DKIM and
+	DMARC records. Verification requires the owner's Google account and DNS access.
+2. Submit https://logicalsurgeon.com/sitemap.xml in that verified property.
+3. Use URL Inspection on all six canonical pages: https://logicalsurgeon.com/,
+	https://logicalsurgeon.com/about.html, https://logicalsurgeon.com/clinic.html,
+	https://logicalsurgeon.com/courses.html,
+	https://logicalsurgeon.com/publications.html and
+	https://logicalsurgeon.com/privacy.html. Check the live URLs and canonical
+	selection, then request indexing where available. Do not submit the duplicate
+	homepage entry as a separate canonical page.
+4. The verified Google Business Profile owner should update its website link to
+	https://logicalsurgeon.com/ and confirm the saved link.
+
+Sitemap submission and indexing requests do not guarantee indexing or rankings.
 The owner must verify the full clinic address, hours, medical registration details
 and actual services before publishing them as confirmed information. Google Business
 Profile ownership, listing details and any changes also require owner verification;
@@ -183,7 +206,5 @@ do not invent address, service, registration or availability claims.
 Credentials, review quotations and publication details should be approved by
 Dr. Nihar before using them as independently verified claims.
 
-No `robots.txt` is added: crawlers read it at the host root
-(`https://jahnvi480.github.io/robots.txt`), not this project's `/logicalsurgeon/`
-subpath. Host-root robots configuration requires control of the host-root site.
-
+After publishing, the owner should confirm HTTPS and the root sitemap and robots
+URLs are reachable before completing the Search Console steps above.

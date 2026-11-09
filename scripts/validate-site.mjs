@@ -1,13 +1,18 @@
 import assert from 'node:assert/strict';
-import { readFileSync, existsSync } from 'node:fs';
+import { readFileSync, existsSync, readdirSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const origin = 'https://jahnvi480.github.io/logicalsurgeon/';
+const origin = 'https://logicalsurgeon.com/';
 const pages = ['index.html', 'about.html', 'clinic.html', 'courses.html', 'publications.html', 'privacy.html'];
 const read = name => readFileSync(resolve(root, name), 'utf8');
-assert.equal(read('index.html'), read('portfolio_website.html'), 'Homepage copies differ');
+for (const name of [...readdirSync(root).filter(name => name.endsWith('.html')), 'sitemap.xml']) {
+    assert.ok(!/jahnvi480\.github\.io/i.test(read(name)), `${name}: old GitHub origin must not appear in rendered HTML or sitemap`);
+}
+assert.equal(read('CNAME').replace(/\r?\n$/, ''), new URL(origin).hostname, 'CNAME: exact custom domain');
+assert.equal(read('robots.txt').replaceAll('\r\n', '\n'), `User-agent: *\nAllow: /\n\nSitemap: ${origin}sitemap.xml\n`, 'Robots: allow crawling and advertise the custom-domain sitemap');
+assert.ok(readFileSync(resolve(root, 'index.html')).equals(readFileSync(resolve(root, 'portfolio_website.html'))), 'Homepage copies differ byte-for-byte');
 const home = read('index.html');
 const clinic = read('clinic.html');
 const reviewSource = 'https://www.google.com/search?kgmid=/g/11yqk73vdz&hl=en-IN&q=Kalakriti+Surgical+Centre+Dr.+Nihar+Thakkar#lrd=0x3be7b74fc33d230f:0x4a5c242502f9193d,1,,,,';
@@ -128,4 +133,4 @@ for (const name of [...pages, 'portfolio_website.html']) {
     assert.ok(html.includes('href="privacy.html"'), `${name}: privacy link`);
     if (name !== 'portfolio_website.html') assert.ok(locations.includes(canonical), `${name}: sitemap entry`);
 }
-console.log('PASS: seven entries, six canonical URLs, shared navigation, metadata, JSON-LD, local links/anchors, homepage parity.');
+console.log('PASS: custom-domain origin, CNAME, robots sitemap, no old GitHub origin, seven entries, six canonical URLs, shared navigation, metadata, JSON-LD, local links/anchors, homepage byte parity.');
