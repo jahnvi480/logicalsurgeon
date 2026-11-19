@@ -4,11 +4,12 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
-const origin = 'https://logicalsurgeon.com/';
+const origin = 'https://profile.logicalsurgeon.com/';
 const pages = ['index.html', 'about.html', 'clinic.html', 'courses.html', 'publications.html', 'privacy.html'];
 const read = name => readFileSync(resolve(root, name), 'utf8');
 for (const name of [...readdirSync(root).filter(name => name.endsWith('.html')), 'sitemap.xml']) {
     assert.ok(!/jahnvi480\.github\.io/i.test(read(name)), `${name}: old GitHub origin must not appear in rendered HTML or sitemap`);
+    assert.ok(!read(name).includes('https://logicalsurgeon.com/'), `${name}: root domain must remain separate from the portfolio`);
 }
 assert.equal(read('CNAME').replace(/\r?\n$/, ''), new URL(origin).hostname, 'CNAME: exact custom domain');
 assert.equal(read('robots.txt').replaceAll('\r\n', '\n'), `User-agent: *\nAllow: /\n\nSitemap: ${origin}sitemap.xml\n`, 'Robots: allow crawling and advertise the custom-domain sitemap');

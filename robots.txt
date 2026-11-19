@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://logicalsurgeon.com/sitemap.xml
+Sitemap: https://profile.logicalsurgeon.com/sitemap.xml

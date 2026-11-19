@@ -173,31 +173,38 @@ the clinic address and obtain the official embed before replacing the search.
 
 ## Deployment and remaining owner setup
 GitHub Pages publishes the repository root on `main` at
-https://logicalsurgeon.com/. Keep the existing `CNAME` set to `logicalsurgeon.com`.
+https://profile.logicalsurgeon.com/. Keep `CNAME` set to `profile.logicalsurgeon.com`.
+In Squarespace, add only a CNAME with host `profile` and target
+`jahnvi480.github.io`. Do not replace root, `learn`, `www`, email or verification
+records, and do not change nameservers. TagMango's existing DNS stays independent.
+Configure the same custom domain in GitHub Pages settings; enable Enforce HTTPS
+once DNS validation and certificate provisioning permit it. Until the owner adds
+the DNS record and GitHub provisions the certificate, public HTTPS may be unavailable.
 Keep the two homepage files identical and validate internal links, metadata,
 responsive layouts, inquiry drafts and `git diff --check` before publishing.
 
 The root `robots.txt` is valid for this custom-domain deployment: crawlers read
-https://logicalsurgeon.com/robots.txt. It allows crawling and advertises
-https://logicalsurgeon.com/sitemap.xml; the former project-subpath restriction
+https://profile.logicalsurgeon.com/robots.txt. It allows crawling and advertises
+https://profile.logicalsurgeon.com/sitemap.xml; the former project-subpath restriction
 does not apply at the custom-domain root. Crawl permission does not guarantee
 indexing, and Search Console verification is not a prerequisite for indexing.
 
 Owner actions after deployment (not performed by this repository update):
-1. In Google Search Console, add the Domain property `logicalsurgeon.com` and
+1. In Google Search Console, use an existing verified Domain property
+	`logicalsurgeon.com`, which covers this subdomain. If not already verified, add it and
 	verify ownership using Google's supplied DNS TXT record. Add that record
 	without replacing existing DNS records; preserve email MX, SPF, DKIM and
 	DMARC records. Verification requires the owner's Google account and DNS access.
-2. Submit https://logicalsurgeon.com/sitemap.xml in that verified property.
-3. Use URL Inspection on all six canonical pages: https://logicalsurgeon.com/,
-	https://logicalsurgeon.com/about.html, https://logicalsurgeon.com/clinic.html,
-	https://logicalsurgeon.com/courses.html,
-	https://logicalsurgeon.com/publications.html and
-	https://logicalsurgeon.com/privacy.html. Check the live URLs and canonical
+2. Submit https://profile.logicalsurgeon.com/sitemap.xml in that verified property.
+3. Use URL Inspection on all six canonical pages: https://profile.logicalsurgeon.com/,
+	https://profile.logicalsurgeon.com/about.html, https://profile.logicalsurgeon.com/clinic.html,
+	https://profile.logicalsurgeon.com/courses.html,
+	https://profile.logicalsurgeon.com/publications.html and
+	https://profile.logicalsurgeon.com/privacy.html. Check the live URLs and canonical
 	selection, then request indexing where available. Do not submit the duplicate
 	homepage entry as a separate canonical page.
 4. The verified Google Business Profile owner should update its website link to
-	https://logicalsurgeon.com/ and confirm the saved link.
+	https://profile.logicalsurgeon.com/ and confirm the saved link.
 
 Sitemap submission and indexing requests do not guarantee indexing or rankings.
 The owner must verify the full clinic address, hours, medical registration details
