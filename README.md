@@ -173,6 +173,13 @@ directions button preserves the owner's supplied Google Maps short link. Confirm
 the clinic address and obtain the official embed before replacing the search.
 
 ## Deployment and remaining owner setup
+The homepage and Courses search titles include both Dr. Nihar Thakkar and
+Logical Surgeon. Visible teaching labels retain LogicalSurgeonn with Logical
+Surgeon in parentheses; this is a search-name alias, not a legal rebranding.
+The homepage WebSite schema declares that alternate name and connects the
+ProfilePage to the existing Person identity. Keep search/social titles aligned
+and both homepage copies identical. These signals do not guarantee ranking.
+
 GitHub Pages publishes the repository root on `main` at
 https://profile.logicalsurgeon.com/. Keep `CNAME` set to `profile.logicalsurgeon.com`.
 In Squarespace, add only a CNAME with host `profile` and target

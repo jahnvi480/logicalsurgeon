@@ -15,6 +15,27 @@ assert.equal(read('CNAME').replace(/\r?\n$/, ''), new URL(origin).hostname, 'CNA
 assert.equal(read('robots.txt').replaceAll('\r\n', '\n'), `User-agent: *\nAllow: /\n\nSitemap: ${origin}sitemap.xml\n`, 'Robots: allow crawling and advertise the custom-domain sitemap');
 assert.ok(readFileSync(resolve(root, 'index.html')).equals(readFileSync(resolve(root, 'portfolio_website.html'))), 'Homepage copies differ byte-for-byte');
 const home = read('index.html');
+const homeEntities = [...home.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)]
+    .flatMap(match => {
+        const data = JSON.parse(match[1]);
+        return data['@graph'] ?? [data];
+    });
+const website = homeEntities.find(entity => entity['@type'] === 'WebSite');
+const profile = homeEntities.find(entity => entity['@type'] === 'ProfilePage');
+const person = homeEntities.find(entity => entity['@type'] === 'Person');
+assert.equal(website?.['@id'], `${origin}#website`, 'Homepage: shared website identity');
+assert.equal(website?.alternateName, 'Logical Surgeon', 'Homepage: searchable alternate brand');
+assert.equal(profile?.isPartOf?.['@id'], website['@id'], 'Homepage: profile belongs to website');
+assert.equal(profile?.mainEntity?.['@id'], person?.['@id'], 'Homepage: profile identifies the existing person');
+assert.equal(website?.publisher?.['@id'], person?.['@id'], 'Homepage: website identifies the existing publisher');
+for (const name of ['index.html', 'portfolio_website.html', 'courses.html']) {
+    const html = read(name);
+    const title = html.match(/<title>(.*?)<\/title>/)?.[1];
+    assert.ok(title?.includes('Dr. Nihar Thakkar') && title.includes('Logical Surgeon'), `${name}: person and brand in search title`);
+    assert.ok(html.includes(`<meta property="og:title" content="${title}">`), `${name}: matching social title`);
+    assert.ok(html.includes(`<meta name="twitter:title" content="${title}">`), `${name}: matching Twitter title`);
+    assert.ok(html.includes('LogicalSurgeonn (Logical Surgeon)'), `${name}: visible alternate brand`);
+}
 const clinic = read('clinic.html');
 const reviewSource = 'https://www.google.com/search?kgmid=/g/11yqk73vdz&hl=en-IN&q=Kalakriti+Surgical+Centre+Dr.+Nihar+Thakkar#lrd=0x3be7b74fc33d230f:0x4a5c242502f9193d,1,,,,';
 const reviewExcerpts = [
