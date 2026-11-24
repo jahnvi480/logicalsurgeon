@@ -197,8 +197,14 @@ https://profile.logicalsurgeon.com/sitemap.xml; the former project-subpath restr
 does not apply at the custom-domain root. Crawl permission does not guarantee
 indexing, and Search Console verification is not a prerequisite for indexing.
 
-Owner actions after deployment (not performed by this repository update):
-1. In Google Search Console, use an existing verified Domain property
+Search Console setup and owner checks after deployment:
+The homepage also contains Google's public `google-site-verification` meta tag
+for the URL-prefix property `https://profile.logicalsurgeon.com/`. Keep it in both
+homepage copies to retain HTML-tag ownership verification. This method requires
+no DNS changes and does not verify the separate root domain.
+
+1. In Google Search Console, use the URL-prefix property above after HTML-tag
+	verification, or an existing verified Domain property
 	`logicalsurgeon.com`, which covers this subdomain. If not already verified, add it and
 	verify ownership using Google's supplied DNS TXT record. Add that record
 	without replacing existing DNS records; preserve email MX, SPF, DKIM and
